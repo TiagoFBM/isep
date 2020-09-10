@@ -1,0 +1,3 @@
+bicycle description;weight;park latitude;park longitude;aerodynamic coefficient;frontal area;wheel size
+b01;15,00;41,168750;-8,689950;0,40;0,6;13
+b02;10,00;41,168750;-8,689950;0,50;0,3;17

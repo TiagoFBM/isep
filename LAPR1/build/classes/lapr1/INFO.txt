@@ -1,0 +1,9 @@
+===================================================
+INFORMAÇÃO RELATIVA À FUNCIONALIDADE DE CADA CLASSE
+===================================================
+
+configs - Classe utilizada para definir variáveis, vetores ou matrizes de forma global.
+main - Classe onde estão todos os métodos utilizados.
+main_principal - Classe que é utilizada quando o programa é executado, identifica os argumentos e executa os
+		 métodos conforme se adequem à situação.
+testClass - Classe de testes das funcionalidades da classe 'main'.

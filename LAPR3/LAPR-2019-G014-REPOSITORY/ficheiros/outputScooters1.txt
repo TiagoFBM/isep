@@ -1,0 +1,2 @@
+escooter description;weight;type;park latitude;park longitude;max battery capacity;actual battery capacity;aerodynamic coefficient;frontal area;motor
+s01;12,00;city;41,168750;-8,689950;250;501,200,6350

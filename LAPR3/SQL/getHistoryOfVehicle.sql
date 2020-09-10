@@ -1,0 +1,10 @@
+create FUNCTION getHistoryOfVehicle(descriptionVehicle VEHICLE.DESCRIPTION_VEHICLE%TYPE) RETURN SYS_REFCURSOR AS
+
+    historyVehiclesCursor SYS_REFCURSOR;
+BEGIN
+    OPEN historyVehiclesCursor FOR SELECT r.DESCRIPTION_VEHICLE, r.DESCRIPTION_POINT, TO_CHAR(r.DATE_TIME_BEGIN,'HH24:MI:SS'), TO_CHAR(d.DATE_TIME_END,'HH24:MI:SS')
+    FROM RENT r inner join DELIVERY d ON r.DESCRIPTION_RENT = d.DESCRIPTION_RENT where r.DESCRIPTION_VEHICLE = descriptionVehicle;
+    return historyVehiclesCursor;
+END;
+/
+2
