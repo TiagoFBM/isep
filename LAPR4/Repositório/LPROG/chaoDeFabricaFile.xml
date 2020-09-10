@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fabrica xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="diagramaXSD.xsd">
+    <chaoDeFabrica>
+        <ProductionLines>
+            <ProductionLine internalCode="LP_001">
+                <desc>Linha de produção nº1 - criação de moldes</desc>
+                <Machines>
+                    <Machine serialNumber="56AS4D86AS4D">
+                        <identificationNumber>53</identificationNumber>
+                        <manufacturer>ADIRA - METAL FORMING SOLUTIONS SA</manufacturer>
+                        <model>GH Versátil</model>
+                        <operation>Guillotine</operation>
+                        <installationDate>2001/09/03</installationDate>
+                    </Machine>
+                    <Machine serialNumber="S897FDS2F1W">
+                        <identificationNumber>95</identificationNumber>
+                        <manufacturer>HELDER RAMIRES, LDA - MAPROC</manufacturer>
+                        <model>AE NT</model>
+                        <operation>Puncher</operation>
+                        <installationDate>2018/09/06</installationDate>
+                    </Machine>
+                </Machines>
+            </ProductionLine>
+            <ProductionLine internalCode="LP_002">
+                <desc>Linha de produção nº2 - criação de placas de ferro</desc>
+                <Machines>
+                    <Machine serialNumber="ABD123AHDA23D">
+                        <identificationNumber>10</identificationNumber>
+                        <manufacturer>ADIRA - METAL FORMING SOLUTIONS SA</manufacturer>
+                        <model>PM Guimadira</model>
+                        <operation>Bender</operation>
+                        <installationDate>2005/10/20</installationDate>
+                    </Machine>
+                    <Machine serialNumber="98S7DFQW213E">
+                        <identificationNumber>18</identificationNumber>
+                        <manufacturer>ADIRA - METAL FORMING SOLUTIONS SA</manufacturer>
+                        <model>LE Efficiency</model>
+                        <operation>Laser Cutter</operation>
+                        <installationDate>2010/05/17</installationDate>
+                    </Machine>
+                </Machines>
+            </ProductionLine>
+            <ProductionLine internalCode="LP_003">
+                <desc>Linha de produção nº3 - criação de rolhas</desc>
+                <Machines>
+                    <Machine serialNumber="AKJSDHA7SD623123">
+                        <identificationNumber>106</identificationNumber>
+                        <manufacturer>ADIRA - METAL FORMING SOLUTIONS SA</manufacturer>
+                        <model>LF Fiber</model>
+                        <operation>Laser Cutter</operation>
+                        <installationDate>2000/10/28</installationDate>
+                    </Machine>
+                </Machines>
+            </ProductionLine>
+        </ProductionLines>
+        <Deposits>
+            <Deposit internalCode="depo_1">
+                <desc>Deposit 1</desc>
+            </Deposit>
+            <Deposit internalCode="depo_2">
+                <desc>Deposit 2</desc>
+            </Deposit>
+            <Deposit internalCode="depo_3">
+                <desc>Deposit 3</desc>
+            </Deposit>
+            <Deposit internalCode="depo_4">
+                <desc>Deposit 4</desc>
+            </Deposit>
+            <Deposit internalCode="depo_5">
+                <desc>Deposit 5</desc>
+            </Deposit>
+        </Deposits>
+    </chaoDeFabrica>
+</fabrica>

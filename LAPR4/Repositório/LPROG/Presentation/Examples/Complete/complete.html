@@ -1,0 +1,759 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+                    table {
+                    font-family: arial, sans-serif;
+                    border-collapse: collapse;
+                    width: 100%;
+                    }
+
+                    td {
+                    border: 1px solid #dddddd;
+                    text-align:center;
+                    padding: 8px;
+                    }
+
+                    th {
+                    border: 1px solid #dddddd;
+                    text-align:center;
+                    padding: 8px;
+                    font-family:Helvetica;
+                    font-size:16px;
+                    }
+
+                    tr:nth-child(even) {
+                    background-color: #dddddd;
+                    }
+
+                    h1 {
+                    font-family:Helvetica;
+                    font-size:32px;
+                    text-align:center;
+                    }
+
+                    h2 {
+                    text-align:center;
+                    }
+                </style>
+</head>
+<body>
+<h1 style="font-family:Helvetica;font-size:45px;text-align:center" align="center">Factory</h1>
+<h1 style="font-family:Helvetica;font-size:32px;text-align:center" align="center">Production</h1>
+<h3 style="font-family:Helvetica;text-align:center" align="center">Products</h3>
+<table align="center" cellpadding="2" cellspacing="2" border="0">
+<tr bgcolor="#ffffff">
+<th style="font-family:Helvetica;font-size:16px;text-align:center">Fabrication Code</th><th style="font-family:Helvetica;font-size:16px;text-align:center">Comercial Code</th><th style="font-family:Helvetica;font-size:16px;text-align:center">Brief Description</th><th style="font-family:Helvetica;font-size:16px;text-align:center">Full Description</th><th style="font-family:Helvetica;font-size:16px;text-align:center">Product Category</th><th style="font-family:Helvetica;font-size:16px;text-align:center">Unity</th>
+</tr>
+<tr>
+<td style="text-align:center">001</td><td style="text-align:center">Cimento01</td><td style="text-align:center">Cimento</td><td style="text-align:center">Cimento indicado para cer&acirc;mica de m&eacute;dio formato.</td><td style="text-align:center">Cimento Cola Flex M&eacute;dio</td><td style="text-align:center">KILOGRAMS</td>
+</tr>
+<tr>
+<td style="text-align:center">002</td><td style="text-align:center">Areia02</td><td style="text-align:center">Areia.</td><td style="text-align:center">Areia de rio amarela.</td><td style="text-align:center">Areia Rio</td><td style="text-align:center">KILOGRAMS</td>
+</tr>
+<tr>
+<td style="text-align:center">003</td><td style="text-align:center">Pasta03</td><td style="text-align:center">Pasta niveladora</td><td style="text-align:center">Pasta niveladora para reparar e preparar solos</td><td style="text-align:center">AXTON PLUS 15MM</td><td style="text-align:center">TONNE</td>
+</tr>
+<tr>
+<td style="text-align:center">004</td><td style="text-align:center">Placa04</td><td style="text-align:center">Placa de gesso </td><td style="text-align:center">Placa de gesso cartonado FIRE anti-fogo de tipo F</td><td style="text-align:center">FIBROPLAC FIRE BA13</td><td style="text-align:center">TONNE</td>
+</tr>
+<tr>
+<td style="text-align:center">005</td><td style="text-align:center">AreiaSuja01</td><td style="text-align:center">Areia suja</td><td style="text-align:center">Areia indecente para uso</td><td style="text-align:center">Areia</td><td style="text-align:center">TONNE</td>
+</tr>
+</table>
+<h2></h2>
+<table align="center" border="1">
+<tr bgcolor="#ffffff">
+<th style="text-align:center">Product Fabrication Code</th><th style="text-align:center">Quantity</th><th style="text-align:center">Unity</th><th style="text-align:center">Raw Material Code</th><th style="text-align:center">Product Code</th>
+</tr>
+<tr>
+<td style="text-align:center">001</td><td style="text-align:center">1000</td><td style="text-align:center">UN</td><td style="text-align:center">100</td><td style="text-align:center"></td>
+</tr>
+</table>
+<h3 style="font-family:Helvetica;text-align:center" align="center">Raw Materials</h3>
+<table align="center" cellpadding="2" cellspacing="2" border="0">
+<tr bgcolor="#ffffff">
+<th style="font-family:Helvetica;font-size:16px;text-align:center">Raw Material Code</th><th style="font-family:Helvetica;font-size:16px;text-align:center">Description</th><th style="font-family:Helvetica;font-size:16px;text-align:center">Raw Material Category ID</th><th style="font-family:Helvetica;font-size:16px;text-align:center">Raw Material Category Description
+                </th>
+</tr>
+<tr>
+<td style="text-align:center">100</td><td style="text-align:center">Madeira seca que poder&aacute; ser utilizada para a produ&ccedil;&atilde;o de cadeiras</td><td style="text-align:center">M01</td><td style="text-align:center">Madeira</td>
+</tr>
+<tr>
+<td style="text-align:center">101</td><td style="text-align:center">Ferro que permite distribuir e reter o calor uniformemente</td><td style="text-align:center">FE01</td><td style="text-align:center">Ferro</td>
+</tr>
+<tr>
+<td style="text-align:center">102</td><td style="text-align:center">Ferragens com &acirc;ngulo regul&aacute;vel para maior flexibilidade</td><td style="text-align:center">ACO1</td><td style="text-align:center">A&ccedil;o</td>
+</tr>
+<tr>
+<td style="text-align:center">103</td><td style="text-align:center">O verso imperme&aacute;vel protege o colch&atilde;o.</td><td style="text-align:center">PL01</td><td style="text-align:center">Pl&aacute;stico</td>
+</tr>
+</table>
+<h3 style="font-family:Helvetica;text-align:center" align="center">Raw Material Categories</h3>
+<table align="center" cellpadding="2" cellspacing="2" border="0">
+<tr bgcolor="#ffffff">
+<th style="font-family:Helvetica;font-size:16px;text-align:center">Raw Material Category Code</th><th style="font-family:Helvetica;font-size:16px;text-align:center">Raw Material Category Description
+                </th>
+</tr>
+<tr>
+<td style="text-align:center">1000</td><td style="text-align:center">L&atilde;</td>
+</tr>
+<tr>
+<td style="text-align:center">ACO1</td><td style="text-align:center">A&ccedil;o</td>
+</tr>
+<tr>
+<td style="text-align:center">FE01</td><td style="text-align:center">Ferro</td>
+</tr>
+<tr>
+<td style="text-align:center">M01</td><td style="text-align:center">Madeira</td>
+</tr>
+<tr>
+<td style="text-align:center">PL01</td><td style="text-align:center">Pl&aacute;stico</td>
+</tr>
+</table>
+<h1>Production Order List</h1>
+<table align="center" cellpadding="2" cellspacing="2" border="0">
+<tr bgcolor="#ffffff">
+<th>Production Order Identifier</th><th>Emission Date</th><th>Prevision Date</th><th>Product Fabrication Code</th><th>Amount (unit)</th><th>Standard Unit</th><th>Requests</th><th>State</th><th>Production Line Internal Code</th>
+</tr>
+<tr>
+<td>100003365</td><td>2020/05/16</td><td>2020/05/16</td><td>001</td><td>52 (UN)</td><td>UN</td><td>EC2020/00034<br>EC2020/00035<br>EC2020/00036</td><td>Finished</td><td>LP_002</td>
+</tr>
+</table>
+<br>
+<div id="100003365Report">
+<h2>Production Order
+                100003365 Report
+            </h2>
+<br>
+<h3>Consumptions</h3>
+<table align="center" cellpadding="2" cellspacing="2" border="0">
+<tr bgcolor="#ffffff">
+<th>Product Fabrication Code</th><th>Raw Material Code</th><th>Amount (unit)</th><th>Deposit identifier</th><th>Movement Date</th>
+</tr>
+<tr>
+<td>-----</td><td>100</td><td>195 (UN)</td><td>depo_3</td><td>2019-03-26 15:14:52.0</td>
+</tr>
+<tr>
+<td>-----</td><td>100</td><td>292 (UN)</td><td>depo_3</td><td>2019-03-26 15:16:06.0</td>
+</tr>
+<tr>
+<td>-----</td><td>100</td><td>103 (UN)</td><td>depo_3</td><td>2019-03-26 15:16:52.0</td>
+</tr>
+<tr>
+<td>-----</td><td>100</td><td>86 (UN)</td><td>depo_3</td><td>2019-03-26 15:17:07.0</td>
+</tr>
+<tr>
+<td>-----</td><td>100</td><td>119 (UN)</td><td>depo_3</td><td>2019-03-26 15:17:10.0</td>
+</tr>
+<tr>
+<td>-----</td><td>100</td><td>120 (UN)</td><td>depo_3</td><td>2019-03-26 15:17:34.0</td>
+</tr>
+<tr>
+<td>-----</td><td>100</td><td>98 (UN)</td><td>depo_3</td><td>2019-03-26 15:17:51.0</td>
+</tr>
+<tr>
+<td>-----</td><td>100</td><td>60 (UN)</td><td>depo_3</td><td>2019-03-26 15:18:06.0</td>
+</tr>
+<tr>
+<td>-----</td><td>100</td><td>136 (UN)</td><td>depo_3</td><td>2019-03-26 15:18:18.0</td>
+</tr>
+<tr>
+<td>-----</td><td>100</td><td>64 (UN)</td><td>depo_3</td><td>2019-03-26 15:18:19.0</td>
+</tr>
+<tr>
+<td>-----</td><td>100</td><td>145 (UN)</td><td>depo_3</td><td>2019-03-26 15:18:25.0</td>
+</tr>
+<tr>
+<td>-----</td><td>100</td><td>64 (UN)</td><td>depo_3</td><td>2019-03-26 15:18:55.0</td>
+</tr>
+<tr>
+<td>-----</td><td>100</td><td>80 (UN)</td><td>depo_3</td><td>2019-03-26 15:19:04.0</td>
+</tr>
+<tr>
+<td>-----</td><td>100</td><td>79 (UN)</td><td>depo_3</td><td>2019-03-26 15:19:20.0</td>
+</tr>
+<tr>
+<td>-----</td><td>100</td><td>50 (UN)</td><td>depo_3</td><td>2019-03-26 15:19:38.0</td>
+</tr>
+</table>
+<br>
+<h3>Chargebacks</h3>
+<table align="center" cellpadding="2" cellspacing="2" border="0">
+<tr bgcolor="#ffffff">
+<th>Product Fabrication Code</th><th>Raw Material Code</th><th>Amount (unit)</th><th>Deposit identifier</th>
+</tr>
+<tr>
+<td>005</td><td>-----</td><td>11 (UN)</td><td>depo_3</td>
+</tr>
+<tr>
+<td>005</td><td>-----</td><td>17 (UN)</td><td>depo_3</td>
+</tr>
+<tr>
+<td>005</td><td>-----</td><td>6 (UN)</td><td>depo_3</td>
+</tr>
+<tr>
+<td>005</td><td>-----</td><td>5 (UN)</td><td>depo_3</td>
+</tr>
+<tr>
+<td>005</td><td>-----</td><td>7 (UN)</td><td>depo_3</td>
+</tr>
+<tr>
+<td>005</td><td>-----</td><td>7 (UN)</td><td>depo_3</td>
+</tr>
+<tr>
+<td>005</td><td>-----</td><td>6 (UN)</td><td>depo_3</td>
+</tr>
+<tr>
+<td>005</td><td>-----</td><td>3 (UN)</td><td>depo_3</td>
+</tr>
+<tr>
+<td>005</td><td>-----</td><td>8 (UN)</td><td>depo_3</td>
+</tr>
+<tr>
+<td>005</td><td>-----</td><td>4 (UN)</td><td>depo_3</td>
+</tr>
+<tr>
+<td>005</td><td>-----</td><td>8 (UN)</td><td>depo_3</td>
+</tr>
+<tr>
+<td>005</td><td>-----</td><td>4 (UN)</td><td>depo_3</td>
+</tr>
+<tr>
+<td>005</td><td>-----</td><td>5 (UN)</td><td>depo_3</td>
+</tr>
+<tr>
+<td>005</td><td>-----</td><td>5 (UN)</td><td>depo_3</td>
+</tr>
+<tr>
+<td>005</td><td>-----</td><td>3 (UN)</td><td>depo_3</td>
+</tr>
+</table>
+<br>
+<h3>Productions</h3>
+<table align="center" cellpadding="2" cellspacing="2" border="0">
+<tr bgcolor="#ffffff">
+<th>Product Fabrication Code</th><th>Amount (unit)</th><th>Allotment</th>
+</tr>
+<tr>
+<td>001</td><td>1001 (UN)</td><td>DE06191071</td>
+</tr>
+<tr>
+<td>001</td><td>1058 (UN)</td><td>DE06191071</td>
+</tr>
+<tr>
+<td>001</td><td>109 (UN)</td><td>DE06191071</td>
+</tr>
+<tr>
+<td>001</td><td>750 (UN)</td><td>DE06191071</td>
+</tr>
+<tr>
+<td>001</td><td>1070 (UN)</td><td>DE06191071</td>
+</tr>
+<tr>
+<td>001</td><td>663 (UN)</td><td>DE06191071</td>
+</tr>
+<tr>
+<td>001</td><td>1326 (UN)</td><td>DE06191071</td>
+</tr>
+<tr>
+<td>001</td><td>76 (UN)</td><td>DE06191071</td>
+</tr>
+<tr>
+<td>001</td><td>1464 (UN)</td><td>DE06191071</td>
+</tr>
+<tr>
+<td>001</td><td>1734 (UN)</td><td>DE06191072</td>
+</tr>
+<tr>
+<td>001</td><td>1388 (UN)</td><td>DE06191072</td>
+</tr>
+<tr>
+<td>001</td><td>1706 (UN)</td><td>DE06191072</td>
+</tr>
+<tr>
+<td>001</td><td>163 (UN)</td><td>DE06191072</td>
+</tr>
+<tr>
+<td>001</td><td>1284 (UN)</td><td>DE06191072</td>
+</tr>
+<tr>
+<td>001</td><td>1402 (UN)</td><td>DE06191072</td>
+</tr>
+<tr>
+<td>001</td><td>1576 (UN)</td><td>DE06191072</td>
+</tr>
+<tr>
+<td>001</td><td>1217 (UN)</td><td>DE06191072</td>
+</tr>
+<tr>
+<td>001</td><td>96 (UN)</td><td>DE06191072</td>
+</tr>
+<tr>
+<td>001</td><td>647 (UN)</td><td>DE06191072</td>
+</tr>
+<tr>
+<td>001</td><td>893 (UN)</td><td>DE06191073</td>
+</tr>
+<tr>
+<td>001</td><td>705 (UN)</td><td>DE06191073</td>
+</tr>
+<tr>
+<td>001</td><td>562 (UN)</td><td>DE06191073</td>
+</tr>
+<tr>
+<td>001</td><td>277 (UN)</td><td>DE06191073</td>
+</tr>
+<tr>
+<td>001</td><td>520 (UN)</td><td>DE06191073</td>
+</tr>
+<tr>
+<td>001</td><td>512 (UN)</td><td>DE06191073</td>
+</tr>
+<tr>
+<td>001</td><td>413 (UN)</td><td>DE06191073</td>
+</tr>
+<tr>
+<td>001</td><td>67 (UN)</td><td>DE06191073</td>
+</tr>
+<tr>
+<td>001</td><td>423 (UN)</td><td>DE06191081</td>
+</tr>
+<tr>
+<td>001</td><td>597 (UN)</td><td>DE06191081</td>
+</tr>
+<tr>
+<td>001</td><td>64 (UN)</td><td>DE06191081</td>
+</tr>
+<tr>
+<td>001</td><td>83 (UN)</td><td>DE06191081</td>
+</tr>
+<tr>
+<td>001</td><td>393 (UN)</td><td>DE06191081</td>
+</tr>
+<tr>
+<td>001</td><td>272 (UN)</td><td>DE06191081</td>
+</tr>
+<tr>
+<td>001</td><td>561 (UN)</td><td>DE06191081</td>
+</tr>
+<tr>
+<td>001</td><td>382 (UN)</td><td>DE06191081</td>
+</tr>
+<tr>
+<td>001</td><td>533 (UN)</td><td>DE06191081</td>
+</tr>
+<tr>
+<td>001</td><td>571 (UN)</td><td>DE06191082</td>
+</tr>
+<tr>
+<td>001</td><td>567 (UN)</td><td>DE06191082</td>
+</tr>
+<tr>
+<td>001</td><td>775 (UN)</td><td>DE06191082</td>
+</tr>
+<tr>
+<td>001</td><td>65 (UN)</td><td>DE06191082</td>
+</tr>
+<tr>
+<td>001</td><td>634 (UN)</td><td>DE06191082</td>
+</tr>
+<tr>
+<td>001</td><td>584 (UN)</td><td>DE06191082</td>
+</tr>
+<tr>
+<td>001</td><td>600 (UN)</td><td>DE06191082</td>
+</tr>
+<tr>
+<td>001</td><td>551 (UN)</td><td>DE06191082</td>
+</tr>
+<tr>
+<td>001</td><td>111 (UN)</td><td>DE06191082</td>
+</tr>
+<tr>
+<td>001</td><td>111 (UN)</td><td>DE06191082</td>
+</tr>
+<tr>
+<td>001</td><td>647 (UN)</td><td>DE06191083</td>
+</tr>
+<tr>
+<td>001</td><td>665 (UN)</td><td>DE06191083</td>
+</tr>
+<tr>
+<td>001</td><td>587 (UN)</td><td>DE06191083</td>
+</tr>
+<tr>
+<td>001</td><td>53 (UN)</td><td>DE06191083</td>
+</tr>
+<tr>
+<td>001</td><td>364 (UN)</td><td>DE06191083</td>
+</tr>
+<tr>
+<td>001</td><td>522 (UN)</td><td>DE06191083</td>
+</tr>
+<tr>
+<td>001</td><td>464 (UN)</td><td>DE06191083</td>
+</tr>
+<tr>
+<td>001</td><td>494 (UN)</td><td>DE06191083</td>
+</tr>
+<tr>
+<td>001</td><td>78 (UN)</td><td>DE06191083</td>
+</tr>
+<tr>
+<td>001</td><td>453 (UN)</td><td>DE06191083</td>
+</tr>
+<tr>
+<td>001</td><td>277 (UN)</td><td>DE06191083</td>
+</tr>
+<tr>
+<td>001</td><td>542 (UN)</td><td>DE06191092</td>
+</tr>
+<tr>
+<td>001</td><td>755 (UN)</td><td>DE06191092</td>
+</tr>
+<tr>
+<td>001</td><td>104 (UN)</td><td>DE06191092</td>
+</tr>
+<tr>
+<td>001</td><td>520 (UN)</td><td>DE06191092</td>
+</tr>
+<tr>
+<td>001</td><td>695 (UN)</td><td>DE06191092</td>
+</tr>
+<tr>
+<td>001</td><td>557 (UN)</td><td>DE06191092</td>
+</tr>
+<tr>
+<td>001</td><td>526 (UN)</td><td>DE06191092</td>
+</tr>
+<tr>
+<td>001</td><td>19 (UN)</td><td>DE06191092</td>
+</tr>
+<tr>
+<td>001</td><td>39 (UN)</td><td>DE06191092</td>
+</tr>
+<tr>
+<td>001</td><td>533 (UN)</td><td>DE06191093</td>
+</tr>
+<tr>
+<td>001</td><td>545 (UN)</td><td>DE06191093</td>
+</tr>
+<tr>
+<td>001</td><td>481 (UN)</td><td>DE06191093</td>
+</tr>
+<tr>
+<td>001</td><td>53 (UN)</td><td>DE06191093</td>
+</tr>
+<tr>
+<td>001</td><td>396 (UN)</td><td>DE06191093</td>
+</tr>
+<tr>
+<td>001</td><td>308 (UN)</td><td>DE06191093</td>
+</tr>
+<tr>
+<td>001</td><td>97 (UN)</td><td>DE06191105</td>
+</tr>
+<tr>
+<td>001</td><td>418 (UN)</td><td>DE06191105</td>
+</tr>
+<tr>
+<td>001</td><td>3859 (UN)</td><td>DE06191105</td>
+</tr>
+<tr>
+<td>001</td><td>552 (UN)</td><td>DE06191105</td>
+</tr>
+<tr>
+<td>001</td><td>246 (UN)</td><td>DE06191105</td>
+</tr>
+<tr>
+<td>001</td><td>67 (UN)</td><td>DE06191105</td>
+</tr>
+<tr>
+<td>001</td><td>52 (UN)</td><td>DE06191131</td>
+</tr>
+<tr>
+<td>001</td><td>541 (UN)</td><td>DE06191131</td>
+</tr>
+<tr>
+<td>001</td><td>331 (UN)</td><td>DE06191131</td>
+</tr>
+<tr>
+<td>001</td><td>334 (UN)</td><td>DE06191131</td>
+</tr>
+<tr>
+<td>001</td><td>376 (UN)</td><td>DE06191131</td>
+</tr>
+<tr>
+<td>001</td><td>378 (UN)</td><td>DE06191131</td>
+</tr>
+<tr>
+<td>001</td><td>343 (UN)</td><td>DE06191131</td>
+</tr>
+<tr>
+<td>001</td><td>89 (UN)</td><td>DE06191131</td>
+</tr>
+<tr>
+<td>001</td><td>879 (UN)</td><td>DE06191132</td>
+</tr>
+<tr>
+<td>001</td><td>438 (UN)</td><td>DE06191132</td>
+</tr>
+<tr>
+<td>001</td><td>407 (UN)</td><td>DE06191132</td>
+</tr>
+<tr>
+<td>001</td><td>289 (UN)</td><td>DE06191132</td>
+</tr>
+<tr>
+<td>001</td><td>45 (UN)</td><td>DE06191132</td>
+</tr>
+<tr>
+<td>001</td><td>575 (UN)</td><td>DE06191132</td>
+</tr>
+<tr>
+<td>001</td><td>701 (UN)</td><td>DE06191132</td>
+</tr>
+<tr>
+<td>001</td><td>760 (UN)</td><td>DE06191132</td>
+</tr>
+<tr>
+<td>001</td><td>909 (UN)</td><td>DE06191132</td>
+</tr>
+<tr>
+<td>001</td><td>82 (UN)</td><td>DE06191132</td>
+</tr>
+<tr>
+<td>001</td><td>501 (UN)</td><td>DE06191132</td>
+</tr>
+<tr>
+<td>001</td><td>628 (UN)</td><td>DE06191133</td>
+</tr>
+<tr>
+<td>001</td><td>118 (UN)</td><td>DE06191133</td>
+</tr>
+<tr>
+<td>001</td><td>627 (UN)</td><td>DE06191133</td>
+</tr>
+<tr>
+<td>001</td><td>597 (UN)</td><td>DE06191133</td>
+</tr>
+<tr>
+<td>001</td><td>500 (UN)</td><td>DE06191133</td>
+</tr>
+<tr>
+<td>001</td><td>422 (UN)</td><td>DE06191141</td>
+</tr>
+<tr>
+<td>001</td><td>547 (UN)</td><td>DE06191141</td>
+</tr>
+<tr>
+<td>001</td><td>84 (UN)</td><td>DE06191141</td>
+</tr>
+<tr>
+<td>001</td><td>65 (UN)</td><td>DE06191141</td>
+</tr>
+<tr>
+<td>001</td><td>514 (UN)</td><td>DE06191141</td>
+</tr>
+<tr>
+<td>001</td><td>318 (UN)</td><td>DE06191141</td>
+</tr>
+<tr>
+<td>001</td><td>488 (UN)</td><td>DE06191141</td>
+</tr>
+<tr>
+<td>001</td><td>467 (UN)</td><td>DE06191141</td>
+</tr>
+<tr>
+<td>001</td><td>188 (UN)</td><td>DE06191141</td>
+</tr>
+<tr>
+<td>001</td><td>425 (UN)</td><td>DE06191142</td>
+</tr>
+<tr>
+<td>001</td><td>461 (UN)</td><td>DE06191142</td>
+</tr>
+<tr>
+<td>001</td><td>456 (UN)</td><td>DE06191142</td>
+</tr>
+<tr>
+<td>001</td><td>36 (UN)</td><td>DE06191142</td>
+</tr>
+<tr>
+<td>001</td><td>465 (UN)</td><td>DE06191142</td>
+</tr>
+<tr>
+<td>001</td><td>388 (UN)</td><td>DE06191142</td>
+</tr>
+<tr>
+<td>001</td><td>251 (UN)</td><td>DE06191142</td>
+</tr>
+<tr>
+<td>001</td><td>283 (UN)</td><td>DE06191142</td>
+</tr>
+<tr>
+<td>001</td><td>272 (UN)</td><td>DE06191142</td>
+</tr>
+<tr>
+<td>001</td><td>274 (UN)</td><td>DE06191143</td>
+</tr>
+<tr>
+<td>001</td><td>411 (UN)</td><td>DE06191143</td>
+</tr>
+<tr>
+<td>001</td><td>196 (UN)</td><td>DE06191143</td>
+</tr>
+<tr>
+<td>001</td><td>19 (UN)</td><td>DE06191143</td>
+</tr>
+<tr>
+<td>001</td><td>375 (UN)</td><td>DE06191143</td>
+</tr>
+<tr>
+<td>001</td><td>330 (UN)</td><td>DE06191143</td>
+</tr>
+<tr>
+<td>001</td><td>256 (UN)</td><td>DE06191143</td>
+</tr>
+<tr>
+<td>001</td><td>47 (UN)</td><td>DE06191143</td>
+</tr>
+</table>
+<br>
+<h3>ProductionDeliverys</h3>
+<table align="center" cellpadding="2" cellspacing="2" border="0">
+<tr bgcolor="#ffffff">
+<th>Product Fabrication Code</th><th>Amount (unit)</th><th>Deposit identifier</th><th>Allotment</th>
+</tr>
+<tr>
+<td>001</td><td>7517 (UN)</td><td>depo_1</td><td>-----</td>
+</tr>
+<tr>
+<td>001</td><td>11213 (UN)</td><td>depo_1</td><td>-----</td>
+</tr>
+<tr>
+<td>001</td><td>3949 (UN)</td><td>depo_1</td><td>-----</td>
+</tr>
+<tr>
+<td>001</td><td>3308 (UN)</td><td>depo_1</td><td>-----</td>
+</tr>
+<tr>
+<td>001</td><td>4569 (UN)</td><td>depo_1</td><td>-----</td>
+</tr>
+<tr>
+<td>001</td><td>4604 (UN)</td><td>depo_1</td><td>-----</td>
+</tr>
+<tr>
+<td>001</td><td>3757 (UN)</td><td>depo_1</td><td>-----</td>
+</tr>
+<tr>
+<td>001</td><td>2316 (UN)</td><td>depo_1</td><td>-----</td>
+</tr>
+<tr>
+<td>001</td><td>5239 (UN)</td><td>depo_2</td><td>-----</td>
+</tr>
+<tr>
+<td>001</td><td>2444 (UN)</td><td>depo_2</td><td>-----</td>
+</tr>
+<tr>
+<td>001</td><td>5586 (UN)</td><td>depo_2</td><td>-----</td>
+</tr>
+<tr>
+<td>001</td><td>2470 (UN)</td><td>depo_2</td><td>-----</td>
+</tr>
+<tr>
+<td>001</td><td>3093 (UN)</td><td>depo_2</td><td>-----</td>
+</tr>
+<tr>
+<td>001</td><td>3037 (UN)</td><td>depo_2</td><td>-----</td>
+</tr>
+<tr>
+<td>001</td><td>1908 (UN)</td><td>depo_2</td><td>-----</td>
+</tr>
+</table>
+<br>
+<h3>MachineTimes</h3>
+<table align="center" cellpadding="2" cellspacing="2" border="0">
+<tr bgcolor="#ffffff">
+<th>Machine Serial Number</th><th>Date and Time</th><th>New Machine State</th>
+</tr>
+<tr>
+<td>ABD123AHDA23D</td><td>2019-03-26 15:14:46</td><td>ACTIVE</td>
+</tr>
+<tr>
+<td>98S7DFQW213E</td><td>2019-03-26 15:17:10</td><td>ACTIVE</td>
+</tr>
+<tr>
+<td>ABD123AHDA23D</td><td>2019-03-26 15:20:28</td><td>INACTIVE</td>
+</tr>
+<tr>
+<td>98S7DFQW213E</td><td>2019-03-26 15:20:30</td><td>INACTIVE</td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<h1 style="font-family:Helvetica;font-size:32px;text-align:center" align="center">Factory Floor</h1>
+<h3 style="font-family:Helvetica;text-align:center" align="center">Production Lines</h3>
+<table align="center" cellpadding="2" cellspacing="2" border="0">
+<tr bgcolor="#ffffff">
+<th style="font-family:Helvetica;font-size:16px;text-align:center">Internal Code</th><th style="font-family:Helvetica;font-size:16px;text-align:center">Description</th>
+</tr>
+<tr>
+<td style="text-align:center">LP_001</td><td style="text-align:center">Linha de produ&ccedil;&atilde;o n&ordm;1 - cria&ccedil;&atilde;o de moldes</td>
+</tr>
+<tr>
+<td style="text-align:center">LP_002</td><td style="text-align:center">Linha de produ&ccedil;&atilde;o n&ordm;2 - cria&ccedil;&atilde;o de placas de ferro</td>
+</tr>
+<tr>
+<td style="text-align:center">LP_003</td><td style="text-align:center">Linha de produ&ccedil;&atilde;o n&ordm;3 - cria&ccedil;&atilde;o de rolhas</td>
+</tr>
+</table>
+<h2></h2>
+<table align="center" border="1">
+<tr bgcolor="#ffffff">
+<th style="text-align:center">Production Line Internal Code</th><th style="text-align:center">Serial Number</th><th style="text-align:center">Identification Number</th><th style="text-align:center">Manufacturer</th><th style="text-align:center">Model</th><th style="text-align:center">Operation</th><th style="text-align:center">Installation Date</th>
+</tr>
+<tr>
+<td style="text-align:center">LP_001</td><td style="text-align:center">56AS4D86AS4D</td><td style="text-align:center">53</td><td style="text-align:center">ADIRA - METAL FORMING SOLUTIONS SA</td><td style="text-align:center">GH Vers&aacute;til</td><td style="text-align:center">Guillotine</td><td style="text-align:center">2001/09/03</td>
+</tr>
+<tr>
+<td style="text-align:center">LP_001</td><td style="text-align:center">S897FDS2F1W</td><td style="text-align:center">95</td><td style="text-align:center">HELDER RAMIRES, LDA - MAPROC</td><td style="text-align:center">AE NT</td><td style="text-align:center">Puncher</td><td style="text-align:center">2018/09/06</td>
+</tr>
+<tr>
+<td style="text-align:center">LP_002</td><td style="text-align:center">ABD123AHDA23D</td><td style="text-align:center">10</td><td style="text-align:center">ADIRA - METAL FORMING SOLUTIONS SA</td><td style="text-align:center">PM Guimadira</td><td style="text-align:center">Bender</td><td style="text-align:center">2005/10/20</td>
+</tr>
+<tr>
+<td style="text-align:center">LP_002</td><td style="text-align:center">98S7DFQW213E</td><td style="text-align:center">18</td><td style="text-align:center">ADIRA - METAL FORMING SOLUTIONS SA</td><td style="text-align:center">LE Efficiency</td><td style="text-align:center">Laser Cutter</td><td style="text-align:center">2010/05/17</td>
+</tr>
+<tr>
+<td style="text-align:center">LP_003</td><td style="text-align:center">AKJSDHA7SD623123</td><td style="text-align:center">106</td><td style="text-align:center">ADIRA - METAL FORMING SOLUTIONS SA</td><td style="text-align:center">LF Fiber</td><td style="text-align:center">Laser Cutter</td><td style="text-align:center">2000/10/28</td>
+</tr>
+</table>
+<h2></h2>
+<h3 style="font-family:Helvetica;text-align:center" align="center">Deposits</h3>
+<table align="center" cellpadding="2" cellspacing="2" border="0">
+<tr bgcolor="#ffffff">
+<th style="font-family:Helvetica;font-size:16px;text-align:center">Internal Code</th><th style="font-family:Helvetica;font-size:16px;text-align:center">Description</th>
+</tr>
+<tr>
+<td style="text-align:center">depo_1</td><td style="text-align:center">Deposit 1</td>
+</tr>
+<tr>
+<td style="text-align:center">depo_2</td><td style="text-align:center">Deposit 2</td>
+</tr>
+<tr>
+<td style="text-align:center">depo_3</td><td style="text-align:center">Deposit 3</td>
+</tr>
+<tr>
+<td style="text-align:center">depo_4</td><td style="text-align:center">Deposit 4</td>
+</tr>
+<tr>
+<td style="text-align:center">depo_5</td><td style="text-align:center">Deposit 5</td>
+</tr>
+</table>
+</body>
+</html>

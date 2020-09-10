@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relatório xmlns="http://www.dei.isep.ipp.pt/lprog" id="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.dei.isep.ipp.pt/lprog file://Mac/Home/Desktop/Relatório/Relatorio.xsd">
+    <páginaRosto>
+        <tema>Sistema de recolha, processamento e gestão de informação de chão de fábrica</tema>
+        <disciplina>
+            <designação>Linguagens e Programação</designação>
+            <anoCurricular>2</anoCurricular>
+            <sigla>LPROG</sigla>
+        </disciplina>
+        <autor>
+            <nome>Tiago Filipe Moreira</nome>
+            <número>1181011</número>
+            <mail>1181011@isep.ipp.pt</mail>
+        </autor>
+        <autor>
+            <nome>Tiago Miguel Moreira</nome>
+            <número>1181012</número>
+            <mail>1181012@isep.ipp.pt</mail>
+        </autor>
+        <autor>
+            <nome>Daniel Batista Lourenço</nome>
+            <número>1181047</número>
+            <mail>1181047@isep.ipp.pt</mail>
+        </autor>
+        <autor>
+            <nome>João Silva</nome>
+            <número>1181061</número>
+            <mail>1181061@isep.ipp.pt</mail>
+        </autor>
+        <turma>2DI</turma>
+        <professor sigla="AMD" tipoAula="T"/>
+        <professor sigla="ACM" tipoAula="TP"/>
+        <professor sigla="JSM" tipoAula="PL"/>
+        <logotipoDEI>https://www.dei.isep.ipp.pt/images/logo.png</logotipoDEI>
+        <data>2020-06-14</data>
+    </páginaRosto>
+    <corpo id="C1">
+        <introdução tituloSecção="Introdução" id="SEC_INTRO">
+            <parágrafo>Apesar de ter sido desenvolvido no âmbito da unidade curricular de <negrito>LPROG</negrito>, o
+                trabalho apresentado
+                enquadra-se no domínio do <sublinhado>Projeto Integrador do Semestre 4</sublinhado> na medida em que os
+                ficheiros gerados (XML)
+                representam a informação que se encontra registada no Sistema.
+            </parágrafo>
+            <parágrafo>Os principais objetivos foram:</parágrafo>
+            <listaItems>
+                <item>Definir uma representação XML para um domínio específico.</item>
+                <item>Definir a sintaxe dessa linguagem através do respetivo XML Schema (XSD).</item>
+                <item>Criar instâncias (documentos XML) e validá-las de acordo com o XSD.</item>
+                <item>Fazer transformações ao documento XML (para JSON, TXT e HTML) usando XSLT e XPath.</item>
+            </listaItems>
+        </introdução>
+        <outrasSecções>
+            <análise tituloSecção="Análise" id="SEC_ANALISE">
+                <parágrafo>O ficheiro XML é gerado quando é selecionada a opção de exportação no Sistema, assim o
+                    sistema
+                    disponibiliza toda a informação que possui a sistemas externos.
+                </parágrafo>
+                <parágrafo>Visto que a configuração do documento XML é escolhida pelo utilizador (na medida em que este
+                    é quem decide quais conceitos pretende exportar de uma lista de conceitos fornecidos), a grande
+                    maioria dos conceitos são opcionais.
+                </parágrafo>
+                <parágrafo>A equipa decidiu criar uma estrutura hierárquica que parte de um elemento geral que se divide
+                    em vários outros elementos gerais o ficheiro em Areas Funcionais:
+                    <negrito>Chão de Fábrica</negrito>
+                    e <negrito>Produção</negrito>.
+                </parágrafo>
+                <parágrafo>A Área da Produção é responsável pela informação relativa a ordens de produção, produtos,
+                    matérias-primas, entre outros. Já a área do Chão de Fábrica é responsável pelas linhas de produção e
+                    respetivas máquinas e depósitos.
+                </parágrafo>
+                <parágrafo>Dentro de cada Àrea Funcional foram identificados os diversos conceitos que fossem possíveis
+                    de exportar
+                    assim como sub-conceitos a eles associados. Assim, podemos distinguir os seguintes conceitos-chave:
+                </parágrafo>
+                <listaItems>
+                    <item>Matérias Primas</item>
+                    <item>Categorias de Matérias Primas</item>
+                    <item>Produtos</item>
+                    <item>Ordens de Produção</item>
+                    <item>Relatórios de Ordens de Produção</item>
+                    <item>Linhas de Produção</item>
+                    <item>Máquinas</item>
+                    <item>Depósitos</item>
+                </listaItems>
+            </análise>
+            <linguagem tituloSecção="Linguagem" id="SEC_LINGUAGEM">
+                <subsecção id="SUBSEC_LINGUAGEM_XML">XML</subsecção>
+                <parágrafo>Como mencionado previamente, quando o Gestor de Produção pretende exportar informação um
+                    ficheiro XML é criado,
+                    por exemplo, para os produtos o XML gerado seria deste tipo:
+                </parágrafo>
+                <codigo>
+                    <bloco>
+                        <![CDATA[Products]]>
+                        <![CDATA[Product fabricationCode="001"]]>
+                            <![CDATA[comercialCode]]>Cimento01<![CDATA[/comercialCode]]>
+                            <![CDATA[briefDescription]]>Cimento<![CDATA[/briefDescription]]>
+                            <![CDATA[fullDescription]]>Cimento indicado para cerâmica de médio formato.<![CDATA[/fullDescription]]>
+                            <![CDATA[productCategory]]>Cimento Cola Flex Médio<![CDATA[/productCategory]]>
+                            <![CDATA[unit]]>KILOGRAMS<![CDATA[/unit]]>
+                            <![CDATA[ProductSheet]]>
+                                <![CDATA[Quantity]]>
+                                    <![CDATA[valor]]>1000<![CDATA[/valor]]>
+                                    <![CDATA[unity]]>UN<![CDATA[/unity]]>
+                                <![CDATA[/Quantity]]>
+                                <![CDATA[ProductionSheetLine]]>
+                                    <![CDATA[RawMaterial code="100"]]>
+                                        <![CDATA[description]]>Madeira seca que poderá ser utilizada para a produção de cadeiras<![CDATA[/description]]>
+                                        <![CDATA[RawMaterialCategory categoryID="M01"]]>
+                                            <![CDATA[briefDescription]]>Madeira<![CDATA[/briefDescription]]>
+                                        <![CDATA[/RawMaterialCategory]]>
+                                        <![CDATA[DataSheet]]>
+                                            <![CDATA[Referency]]>C:\Users\Daniel Lourenço\Documents\lapr4\repositorio\fabrica\Files\100.pdf
+                                            <![CDATA[/Referency]]>
+                                        <![CDATA[/DataSheet]]>
+                                    <![CDATA[/RawMaterial]]>
+                                    <![CDATA[Quantity]]>
+                                        <![CDATA[valor]]>1000<![CDATA[/valor]]>
+                                        <![CDATA[unity]]>UN<![CDATA[/unity]]>
+                                    <![CDATA[/Quantity]]>
+                                <![CDATA[/ProductionSheetLine]]>
+                            <![CDATA[/ProductSheet]]>
+                        <![CDATA[/Product]]>
+                        <![CDATA[Product fabricationCode="002"]]>
+                            <![CDATA[comercialCode]]>Areia02<![CDATA[/comercialCode]]>
+                            <![CDATA[briefDescription]]>Areia.<![CDATA[/briefDescription]]>
+                            <![CDATA[fullDescription]]>Areia de rio amarela.<![CDATA[/fullDescription]]>
+                            <![CDATA[productCategory]]>Areia Rio<![CDATA[/productCategory]]>
+                            <![CDATA[unit]]>KILOGRAMS<![CDATA[/unit]]>
+                        <![CDATA[/Product]]>
+                        <![CDATA[/Products]]>
+                    </bloco>
+                </codigo>
+                <subsecção id="SUBSEC_LINGUAGEM_XSD">XSD / XML Schema</subsecção>
+                <parágrafo>O ficheiro XSD foi utilizado para definir quais os
+                    elementos e atributos podem aparecer no documento XML.
+                    Considerando a utilização do XSD foi definido que cada atributo e cada elemento,
+                    complexo ou simples, foram definidos utilizando diferentes
+                    <itálico>types</itálico>
+                    e quando esses elementos necessitavam de ser usados eram apenas referenciados.
+                    Deste modo o ficheiro XSD torna-se muito mais simples de manter e reutilizar.
+                </parágrafo>
+                <parágrafo>Por exemplo, para o ficheiro raiz do XSD, temos a seguinte definição:</parágrafo>
+                <codigo>
+                    <bloco>
+                        <![CDATA[xs:element name="fabrica"]]>
+                            <![CDATA[xs:complexType]]>
+                                 <![CDATA[xs:sequence]]>
+                                    <![CDATA[xs:element name="producao" type="TProducao" minOccurs="0" maxOccurs="unbounded"/]]>
+                                    <![CDATA[xs:element name="chaoDeFabrica" type="TChaoFabrica" minOccurs="0" maxOccurs="unbounded"/]]>
+                                <![CDATA[/xs:sequence]]>
+                            <![CDATA[/xs:complexType]]>
+                        <![CDATA[/xs:element]]>
+                    </bloco>
+                </codigo>
+                <parágrafo>Onde o <itálico>type</itálico>
+                    <negrito>TProducao</negrito> e <negrito>TChaoFabrica</negrito> são definidos da seguinte forma,
+                    respectivamente:
+                </parágrafo>
+                <codigo>
+                    <bloco>
+                        <![CDATA[xs:complexType name="TProducao"]]>
+                            <![CDATA[xs:sequence]]>
+                                <![CDATA[xs:element name="RawMaterials" type="TCMateriasPrimas" minOccurs="0"/]]>
+                                <![CDATA[xs:element name="RawMaterialCategorys" type="TCCategoriasMateriaPrima" minOccurs="0"/]]>
+                                <![CDATA[xs:element name="Products" type="TCProdutos" minOccurs="0"/]]>
+                                <![CDATA[xs:element name="ProductionOrders" type="TCOrdensProducao" minOccurs="0"/]]>
+                            <![CDATA[/xs:sequence]]>
+                        <![CDATA[/xs:complexType]]>
+                    </bloco>
+                    <bloco>
+                        <![CDATA[xs:complexType name="TChaoFabrica"]]>
+                            <![CDATA[xs:sequence]]>
+                                <![CDATA[xs:element name="ProductionLines" type="TCLinhasProducao" minOccurs="0"/]]>
+                                <![CDATA[xs:element name="Deposits" type="TCDepositos" minOccurs="0"/]]>
+                            <![CDATA[/xs:sequence]]>
+                        <![CDATA[/xs:complexType]]>
+                    </bloco>
+                </codigo>
+                <parágrafo>Também foram utilizados <itálico>Simple Types</itálico> para identificar
+                    tipos que fossem necessários utilizar mais do que uma vez ou que necessitassem de
+                    validações como o exemplo abaixo exposto.</parágrafo>
+                <codigo>
+                    <bloco>
+                        <![CDATA[xs:simpleType name="TFullDescription"]]>
+                            <![CDATA[xs:restriction base="xs:string"]]>
+                                <![CDATA[xs:maxLength value="70"/]]>
+                                <![CDATA[xs:pattern value="[A-Za-z0-9 \wÀ-ú\.\-]+"/]]>
+                            <![CDATA[/xs:restriction]]>
+                        <![CDATA[/xs:simpleType]]>
+                    </bloco>
+                    <bloco>
+                        <![CDATA[xs:simpleType name="TUnidade"]]>
+                            <![CDATA[xs:restriction base="xs:string"]]>
+                                <![CDATA[xs:enumeration value="UN"/]]>
+                                <![CDATA[xs:enumeration value="TONNE"/]]>
+                                <![CDATA[xs:enumeration value="KILOGRAMS"/]]>
+                                <![CDATA[xs:enumeration value="LITERS"/]]>
+                            <![CDATA[/xs:restriction]]>
+                        <![CDATA[/xs:simpleType]]>
+                    </bloco>
+                </codigo>
+            </linguagem>
+            <transformações tituloSecção="Transformações" id="SEC_TRANSFORMACOES">
+                <parágrafo>Foram feitas 3 transformações para cada tipo para exemplificar as diversas possibilidades de exportação.
+                Foram utilizados os mesmos exemplos de XML para gerar as três diferentes transformações:</parágrafo>
+                <listaItems>
+                    <item>Área de Chão de Fábrica</item>
+                    <item>Área de Produção</item>
+                    <item>Transformação do XML Completo</item>
+                </listaItems>
+                <parágrafo/>
+                <parágrafo>Os ficheiros com essas informações podem ser encontrados na pasta "Exemplos".</parágrafo>
+            </transformações>
+        </outrasSecções>
+        <conclusão tituloSecção="Conclusão" id="SEC_CONCLUSAO">
+            <parágrafo>A equipa acredita ter cumprido com sucesso todos os objetivos propostos visto que conseguimos
+                transformar com sucesso o ficheiro XML com diversas variantes de informação.
+                Em suma, acreditamos que este projeto foi bastante útil para o desenvolvimento de aptidões relacionadas com
+                transformações XML, XSD e XSLT.</parágrafo>
+        </conclusão>
+        <referências tituloSecção="Referências" id="SEC_REFERENCIAS">
+            <refWeb idRef="RefW_MOODLE_LPROG">
+                <URL>https://moodle.isep.ipp.pt/course/view.php?id=8197</URL>
+                <descrição>Matéria leccionada no âmbito da Unidade Curricular de LPROG</descrição>
+                <consultadoEm>2020-06-12</consultadoEm>
+            </refWeb>
+            <refWeb idRef="RefW_MOODLE_LAPR4">
+                <URL>https://moodle.isep.ipp.pt/pluginfile.php/314473/mod_resource/content/1/LEI-2019-19-Sem4-_Projeto_v5-Enquadramento.pdf</URL>
+                <descrição>Enquadramento do Projeto da Unidade Curricular de LPROG</descrição>
+                <consultadoEm>2020-06-12</consultadoEm>
+            </refWeb>
+            <refWeb idRef="RefW_MOODLE_SOF1">
+                <URL>https://stackoverflow.com/questions/24122921/xsl-to-convert-xml-to-json</URL>
+                <descrição>Exemplo de ficheiro JSON</descrição>
+                <consultadoEm>2020-06-12</consultadoEm>
+            </refWeb>
+        </referências>
+    </corpo>
+</relatório>

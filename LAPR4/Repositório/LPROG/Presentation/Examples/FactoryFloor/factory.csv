@@ -1,0 +1,27 @@
+=============================
+           Factory           
+=============================
+
+===============
+Chão de Fábrica
+===============
+
+Internal Code;Description
+LP_001;Linha de produção nº1 - criação de moldes;
+LP_002;Linha de produção nº2 - criação de placas de ferro;
+LP_003;Linha de produção nº3 - criação de rolhas;
+
+Production Line Internal Code;Serial Number;Identification Number;Manufacturer;Model; Operation; Installation Date
+LP_001;56AS4D86AS4D;53;ADIRA - METAL FORMING SOLUTIONS SA;GH Versátil;Guillotine;2001/09/03;
+LP_001;S897FDS2F1W;95;HELDER RAMIRES, LDA - MAPROC;AE NT;Puncher;2018/09/06;
+LP_002;ABD123AHDA23D;10;ADIRA - METAL FORMING SOLUTIONS SA;PM Guimadira;Bender;2005/10/20;
+LP_002;98S7DFQW213E;18;ADIRA - METAL FORMING SOLUTIONS SA;LE Efficiency;Laser Cutter;2010/05/17;
+LP_003;AKJSDHA7SD623123;106;ADIRA - METAL FORMING SOLUTIONS SA;LF Fiber;Laser Cutter;2000/10/28;
+
+Internal Code;Description
+depo_1;Deposit 1;
+depo_2;Deposit 2;
+depo_3;Deposit 3;
+depo_4;Deposit 4;
+depo_5;Deposit 5;
+

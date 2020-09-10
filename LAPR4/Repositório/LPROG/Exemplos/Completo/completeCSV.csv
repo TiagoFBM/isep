@@ -1,0 +1,54 @@
+=============================
+           Factory           
+=============================
+
+===============
+Chão de Fábrica
+===============
+
+Internal Code;Description
+LP_001;Linha de produção nº1 - criação de moldes;
+LP_002;Linha de produção nº2 - criação de placas de ferro;
+LP_003;Linha de produção nº3 - criação de rolhas;
+
+Production Line Internal Code;Serial Number;Identification Number;Manufacturer;Model; Operation; Installation Date
+LP_001;56AS4D86AS4D;53;ADIRA - METAL FORMING SOLUTIONS SA;GH Versátil;Guillotine;2001/09/03;
+LP_001;S897FDS2F1W;95;HELDER RAMIRES, LDA - MAPROC;AE NT;Puncher;2018/09/06;
+LP_002;ABD123AHDA23D;10;ADIRA - METAL FORMING SOLUTIONS SA;PM Guimadira;Bender;2005/10/20;
+LP_002;98S7DFQW213E;18;ADIRA - METAL FORMING SOLUTIONS SA;LE Efficiency;Laser Cutter;2010/05/17;
+LP_003;AKJSDHA7SD623123;106;ADIRA - METAL FORMING SOLUTIONS SA;LF Fiber;Laser Cutter;2000/10/28;
+
+Internal Code;Description
+depo_1;Deposit 1;
+depo_2;Deposit 2;
+depo_3;Deposit 3;
+depo_4;Deposit 4;
+depo_5;Deposit 5;
+
+========
+Produção
+========
+
+Fabrication Code;Comercial Code;Brief Description;Full Description;Product Category;Unity
+001;Cimento01;Cimento;Cimento indicado para cerâmica de médio formato.;Cimento Cola Flex Médio;KILOGRAMS;
+002;Areia02;Areia.;Areia de rio amarela.;Areia Rio;KILOGRAMS;
+003;Pasta03;Pasta niveladora;Pasta niveladora para reparar e preparar solos;AXTON PLUS 15MM;TONNE;
+004;Placa04;Placa de gesso ;Placa de gesso cartonado FIRE anti-fogo de tipo F;FIBROPLAC FIRE BA13;TONNE;
+005;AreiaSuja01;Areia suja;Areia indecente para uso;Areia;TONNE;
+
+Product Fabrication Code;Quantity;Unity;Raw Material Code;Product Code;
+001;1000;UN;100;;
+
+Raw Material Code;Description;Raw Material Category ID;Raw Material Category Description;
+100;Madeira seca que poderá ser utilizada para a produção de cadeiras;M01;Madeira;
+101;Ferro que permite distribuir e reter o calor uniformemente;FE01;Ferro;
+102;Ferragens com ângulo regulável para maior flexibilidade;ACO1;Aço;
+103;O verso impermeável protege o colchão.;PL01;Plástico;
+
+Raw Material Category Code;Raw Material Category Description;
+M01;Madeira;
+FE01;Ferro;
+ACO1;Aço;
+PL01;Plástico;
+1000;Lã;
+

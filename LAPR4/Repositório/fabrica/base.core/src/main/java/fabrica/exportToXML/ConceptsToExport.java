@@ -1,0 +1,7 @@
+package fabrica.exportToXML;
+
+public enum ConceptsToExport {
+    RAW_MATERIAL, RAW_MATERIAL_CATEGORY, PRODUCT,  PRODUCTION_LINE, PRODUCTION_ORDERS, DEPOSIT
+
+
+}

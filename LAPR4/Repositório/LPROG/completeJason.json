@@ -1,0 +1,153 @@
+{
+  "fabrica": {
+    "producao": {
+      "Product": [
+        {
+          "fabricationCode": "001",
+          "comercialCode": "Cimento01",
+          "briefDescription": "Cimento",
+          "fullDescription": "Cimento indicado para cerâmica de médio formato.",
+          "productCategory": "Cimento Cola Flex Médio",
+          "unit": "KILOGRAMS",
+          "ProductSheet": {
+            "Quantity": {
+              "valor": "1000",
+              "unit": "UN"
+            },
+            "ProductionSheetLine": [
+              {
+                "RawMaterial": {
+                  "code": "100",
+                  "description": "Madeira seca que poderá ser utilizada para a produção de cadeiras",
+                  "RawMaterialCategory": {
+                    "categoryID": "M01",
+                    "briefDescription": "Madeira"
+                  },
+                  "DataSheet": {
+                    "Referency": "C:\Users\Daniel Lourenço\Documents\lapr4\repositorio\fabrica\Files\100.pdf"
+                  }
+                },
+                "Quantity": {
+                  "valor": "1000",
+                  "unit": "UN"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "fabricationCode": "002",
+          "comercialCode": "Areia02",
+          "briefDescription": "Areia.",
+          "fullDescription": "Areia de rio amarela.",
+          "productCategory": "Areia Rio",
+          "unit": "KILOGRAMS"
+        },
+        {
+          "fabricationCode": "003",
+          "comercialCode": "Pasta03",
+          "briefDescription": "Pasta niveladora",
+          "fullDescription": "Pasta niveladora para reparar e preparar solos",
+          "productCategory": "AXTON PLUS 15MM",
+          "unit": "TONNE"
+        },
+        {
+          "fabricationCode": "004",
+          "comercialCode": "Placa04",
+          "briefDescription": "Placa de gesso",
+          "fullDescription": "Placa de gesso cartonado FIRE anti-fogo de tipo F",
+          "productCategory": "FIBROPLAC FIRE BA13",
+          "unit": "TONNE"
+        },
+        {
+          "fabricationCode": "005",
+          "comercialCode": "AreiaSuja01",
+          "briefDescription": "Areia suja",
+          "fullDescription": "Areia indecente para uso",
+          "productCategory": "Areia",
+          "unit": "TONNE"
+        }
+      ],
+      "RawMaterials": {
+        "RawMaterial": [
+          {
+            "RawMaterial": {
+              "code": "100",
+              "description": "Madeira seca que poderá ser utilizada para a produção de cadeiras",
+              "RawMaterialCategory": {
+                "categoryID": "M01",
+                "briefDescription": "Madeira"
+              },
+              "DataSheet": {
+                "Referency": "C:\Users\Daniel Lourenço\Documents\lapr4\repositorio\fabrica\Files\100.pdf"
+              }
+            }
+          },
+          {
+            "RawMaterial": {
+              "code": "101",
+              "description": "Ferro que permite distribuir e reter o calor uniformemente",
+              "RawMaterialCategory": {
+                "categoryID": "FE01",
+                "briefDescription": "Ferro"
+              },
+              "DataSheet": {
+                "Referency": "C:\Users\Daniel Lourenço\Documents\lapr4\repositorio\fabrica\Files\101.pdf"
+              }
+            }
+          },
+          {
+            "RawMaterial": {
+              "code": "102",
+              "description": "Ferragens com ângulo regulável para maior flexibilidade",
+              "RawMaterialCategory": {
+                "categoryID": "ACO1",
+                "briefDescription": "Aço"
+              },
+              "DataSheet": {
+                "Referency": "C:\Users\Daniel Lourenço\Documents\lapr4\repositorio\fabrica\Files\102.pdf"
+              }
+            }
+          },
+          {
+            "RawMaterial": {
+              "code": "103",
+              "description": "O verso impermeável protege o colchão.",
+              "RawMaterialCategory": {
+                "categoryID": "PL01",
+                "briefDescription": "Plástico"
+              },
+              "DataSheet": {
+                "Referency": "C:\Users\Daniel Lourenço\Documents\lapr4\repositorio\fabrica\Files\103.pdf"
+              }
+            }
+          }
+        ]
+      },
+      "RawMaterialCategorys": {
+        "RawMaterialCategory": [
+          {
+            "categoryID": "M01",
+            "briefDescription": "Madeira"
+          },
+          {
+            "categoryID": "FE01",
+            "briefDescription": "Ferro"
+          },
+          {
+            "categoryID": "ACO1",
+            "briefDescription": "Aço"
+          },
+          {
+            "categoryID": "PL01",
+            "briefDescription": "Plástico"
+          },
+          {
+            "categoryID": "1000",
+            "briefDescription": "Lã"
+          }
+        ]
+      }
+    }
+  }
+}

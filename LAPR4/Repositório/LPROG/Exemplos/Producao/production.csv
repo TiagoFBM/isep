@@ -1,0 +1,37 @@
+=============================
+           Factory           
+=============================
+
+===============
+Chão de Fábrica
+===============
+
+
+
+========
+Produção
+========
+
+Fabrication Code;Comercial Code;Brief Description;Full Description;Product Category;Unity
+001;Cimento01;Cimento;Cimento indicado para cerâmica de médio formato.;Cimento Cola Flex Médio;KILOGRAMS;
+002;Areia02;Areia.;Areia de rio amarela.;Areia Rio;KILOGRAMS;
+003;Pasta03;Pasta niveladora;Pasta niveladora para reparar e preparar solos;AXTON PLUS 15MM;TONNE;
+004;Placa04;Placa de gesso ;Placa de gesso cartonado FIRE anti-fogo de tipo F;FIBROPLAC FIRE BA13;TONNE;
+005;AreiaSuja01;Areia suja;Areia indecente para uso;Areia;TONNE;
+
+Product Fabrication Code;Quantity;Unity;Raw Material Code;Product Code;
+001;1000;UN;100;;
+
+Raw Material Code;Description;Raw Material Category ID;Raw Material Category Description;
+100;Madeira seca que poderá ser utilizada para a produção de cadeiras;M01;Madeira;
+101;Ferro que permite distribuir e reter o calor uniformemente;FE01;Ferro;
+102;Ferragens com ângulo regulável para maior flexibilidade;ACO1;Aço;
+103;O verso impermeável protege o colchão.;PL01;Plástico;
+
+Raw Material Category Code;Raw Material Category Description;
+M01;Madeira;
+FE01;Ferro;
+ACO1;Aço;
+PL01;Plástico;
+1000;Lã;
+

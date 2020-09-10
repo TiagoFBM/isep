@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2020 rel. 2 [x64] [http://www.altova.com] by Tiago Moreira [ISEP] -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="fabrica">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="producao" type="TProducao" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="chaoDeFabrica" type="TChaoFabrica" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="TProducao">
+		<xs:sequence>
+			<xs:element name="RawMaterials" type="TCMateriasPrimas" minOccurs="0"/>
+			<xs:element name="RawMaterialCategorys" type="TCCategoriasMateriaPrima" minOccurs="0"/>
+			<xs:element name="Products" type="TCProdutos" minOccurs="0"/>
+			<xs:element name="ProductionOrders" type="TCOrdensProducao" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TCProdutos">
+		<xs:sequence>
+			<xs:element name="Product" type="TProduto" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TCOrdensProducao">
+		<xs:sequence>
+			<xs:element name="ProductionOrder" type="TOrdemProducao" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TCCategoriasMateriaPrima">
+		<xs:sequence>
+			<xs:element name="RawMaterialCategory" type="TCategoriaMateriaPrima" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TCMateriasPrimas">
+		<xs:sequence>
+			<xs:element name="RawMaterial" type="TMateriaPrima" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TProduto">
+		<xs:sequence>
+			<xs:element name="comercialCode" type="TAlfanumericCode"/>
+			<xs:element name="briefDescription" type="TBriefDescription"/>
+			<xs:element name="fullDescription" type="TFullDescription"/>
+			<xs:element name="productCategory" type="TBriefDescription"/>
+			<xs:element name="unit" type="TUnidade"/>
+			<xs:element name="ProductSheet" type="TFichaProducao" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="fabricationCode" type="TAlfanumericCode" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TMateriaPrima">
+		<xs:sequence>
+			<xs:element name="description" type="TFullDescription"/>
+			<xs:element name="RawMaterialCategory" type="TCategoriaMateriaPrima"/>
+			<xs:element name="DataSheet" type="TDataSheet"/>
+		</xs:sequence>
+		<xs:attribute name="code" type="TAlfanumericCode" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TCategoriaMateriaPrima">
+		<xs:sequence>
+			<xs:element name="briefDescription" type="TBriefDescription"/>
+		</xs:sequence>
+		<xs:attribute name="categoryID" type="TShortAlfanumericCode" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TFichaProducao">
+		<xs:sequence>
+			<xs:element name="Quantity" type="TQuantidade"/>
+			<xs:element name="ProductionSheetLine" type="TLinhaFichaProducao" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TQuantidade">
+		<xs:sequence>
+			<xs:element name="valor" type="xs:double"/>
+			<xs:element name="unity" type="TUnidade"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TLinhaFichaProducao">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element name="Product" type="TProduto"/>
+				<xs:element name="RawMaterial" type="TMateriaPrima"/>
+			</xs:choice>
+			<xs:element name="Quantity" type="TQuantidade"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TOrdemProducao">
+		<xs:sequence>
+			<xs:element name="emissionDate" type="TDate"/>
+			<xs:element name="previsionDate" type="TDate"/>
+			<xs:element name="Product" type="TProduto"/>
+			<xs:element name="Quantity" type="TQuantidade"/>
+			<xs:element name="unit" type="TUnidade"/>
+			<xs:element name="ProductionOrderReport" type="TRelatorio" minOccurs="0"/>
+			<xs:element name="Requests" type="TRequests"/>
+			<xs:element name="state" type="TEstado"/>
+		</xs:sequence>
+		<xs:attribute name="POCode" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TRelatorio">
+		<xs:sequence>
+			<xs:element name="Consumptions">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="consumption" type="TConsumption" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Chargebacks">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="chargeback" type="TChargeback" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Productions">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="production" type="TProduction"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ProductionDeliverys">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="productionDelivery" type="TProductionDelivery"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="MachineTimes">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="machineTime" type="TMachineTime"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TDuracao">
+		<xs:sequence>
+			<xs:element name="dataTempoInicio"/>
+			<xs:element name="dataTempoFim"/>
+			<xs:element name="tempoBruto"/>
+			<xs:element name="tempoEfetivo"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TChaoFabrica">
+		<xs:sequence>
+			<xs:element name="ProductionLines" type="TCLinhasProducao" minOccurs="0"/>
+			<xs:element name="Deposits" type="TCDepositos" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TCLinhasProducao">
+		<xs:sequence>
+			<xs:element name="ProductionLine" type="TLinhaProducao" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TCDepositos">
+		<xs:sequence>
+			<xs:element name="Deposit" type="TDeposito" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TDeposito">
+		<xs:sequence>
+			<xs:element name="desc" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="internalCode" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TMaquina">
+		<xs:sequence>
+			<xs:element name="identificationNumber">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:pattern value="[0-9]+"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="manufacturer" type="xs:string"/>
+			<xs:element name="model" type="xs:string"/>
+			<xs:element name="operation" type="xs:string"/>
+			<xs:element name="installationDate" type="TDate"/>
+		</xs:sequence>
+		<xs:attribute name="serialNumber" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="6"/>
+					<xs:maxLength value="20"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="TLinhaProducao">
+		<xs:sequence>
+			<xs:element name="desc" type="xs:string"/>
+			<xs:element name="Machines" type="TCMaquinas"/>
+		</xs:sequence>
+		<xs:attribute name="internalCode"/>
+	</xs:complexType>
+	<xs:complexType name="TCLotes">
+		<xs:sequence>
+			<xs:element name="lote" type="TLote" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TLote">
+		<xs:sequence>
+			<xs:element name="movimento" type="TMovimento"/>
+		</xs:sequence>
+		<xs:attribute name="codigoIdentificacao"/>
+	</xs:complexType>
+	<xs:complexType name="TCUsosMateriaPrima">
+		<xs:sequence>
+			<xs:element name="usoMateriaPrima" type="TUsoMateriaPrima" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TUsoMateriaPrima">
+		<xs:sequence>
+			<xs:element name="consumos" type="TCConsumos" minOccurs="0"/>
+			<xs:element name="estornos" type="TCEstornos" minOccurs="0"/>
+			<xs:element name="desvioConsumo" type="TDesvio" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="idMateriaPrima" type="TIDMateriaPrima"/>
+	</xs:complexType>
+	<xs:complexType name="TCTemposMaquina">
+		<xs:sequence>
+			<xs:element name="tempoMaquina" type="TTempoMaquina" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TTempoMaquina">
+		<xs:sequence>
+			<xs:element name="maquina" type="TMaquina"/>
+			<xs:element name="tempo" type="TDuracao"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TCConsumos">
+		<xs:sequence>
+			<xs:element name="consumo" type="TMovimento" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TMovimento">
+		<xs:sequence>
+			<xs:element name="quantidade" type="TQuantidade"/>
+			<xs:element name="deposito" type="TDeposito"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TCEstornos">
+		<xs:sequence>
+			<xs:element name="estorno" type="TMovimento" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TDesvio">
+		<xs:sequence>
+			<xs:element name="quantidade" type="TQuantidade"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TIDMateriaPrima">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="TUnidade">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="UN"/>
+			<xs:enumeration value="TONNE"/>
+			<xs:enumeration value="KILOGRAMS"/>
+			<xs:enumeration value="LITERS"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TEstado">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:complexType name="TRequests">
+		<xs:sequence>
+			<xs:element name="request" type="TRequest" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TRequest">
+		<xs:sequence>
+			<xs:element name="code" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TConsumption">
+		<xs:sequence>
+			<xs:element name="quantity" type="TQuantidade"/>
+			<xs:element name="movementDate"/>
+			<xs:element name="deposit" type="TDeposito"/>
+			<xs:choice>
+				<xs:element name="product" type="TProduto"/>
+				<xs:element name="rawMaterial" type="TMateriaPrima"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TChargeback">
+		<xs:sequence>
+			<xs:element name="quantity" type="TQuantidade"/>
+			<xs:element name="deposit" type="TDeposito"/>
+			<xs:choice>
+				<xs:element name="product" type="TProduto"/>
+				<xs:element name="rawMaterial" type="TMateriaPrima"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TAlfanumericCode">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="15"/>
+			<xs:pattern value="[A-Za-z0-9]+[/[A-Za-z0-9]+]?"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TBriefDescription">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="30"/>
+			<xs:pattern value="[A-Za-z0-9 \wÀ-ú\.\-]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TFullDescription">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="70"/>
+			<xs:pattern value="[A-Za-z0-9 \wÀ-ú\.\-]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TShortAlfanumericCode">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="10"/>
+			<xs:pattern value="[A-Za-z0-9]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TSerialNumber">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="6"/>
+			<xs:maxLength value="20"/>
+			<xs:pattern value="[A-Za-z]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TDate">
+		<xs:restriction base="xs:string">
+			<xs:length value="10"/>
+			<xs:pattern value="[0-9]{4}/[0-9]{2}/[0-9]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TProduction">
+		<xs:sequence>
+			<xs:element name="product" type="TProduto"/>
+			<xs:element name="quantity" type="TQuantidade"/>
+			<xs:element name="allotment" type="TAlfanumericCode"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TProductionDelivery">
+		<xs:sequence>
+			<xs:element name="deposit" type="TDeposito"/>
+			<xs:element name="product" type="TProduto"/>
+			<xs:element name="quantity" type="TQuantidade"/>
+			<xs:element name="allotment" type="TAlfanumericCode"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TMachineTime">
+		<xs:sequence>
+			<xs:element name="machine" type="TMaquina"/>
+			<xs:element name="date" type="TDate"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TCMaquinas">
+		<xs:sequence>
+			<xs:element name="Machine" type="TMaquina" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="TDataSheet">
+		<xs:sequence>
+			<xs:element name="Referency" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

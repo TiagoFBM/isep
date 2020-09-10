@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence">
+    <persistence-unit name="eapli.base">
+        <!--
+      <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+      -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>eapli.framework.infrastructure.authz.domain.model.SystemUser</class>
+        <class>eapli.framework.infrastructure.authz.domain.model.Role</class>
+        <class>eapli.framework.infrastructure.authz.domain.model.RoleSet</class>
+        <class>eapli.framework.infrastructure.authz.domain.model.RoleAssignment</class>
+        <class>fabrica.clientusermanagement.domain.ClientUser</class>
+        <class>fabrica.clientusermanagement.domain.SignupRequest</class>
+        <class>fabrica.production.domain.Product</class>
+        <class>fabrica.production.domain.RawMaterial</class>
+        <class>fabrica.production.domain.RawMaterialCategory</class>
+        <class>fabrica.production.domain.ProductionSheetLine</class>
+        <class>fabrica.production.domain.ProductionSheet</class>
+        <class>fabrica.production.domain.RawMaterialCategory</class>
+        <class>fabrica.factoryfloor.depositmanagement.domain.Deposit</class>
+        <class>fabrica.factoryfloor.machinemanagement.domain.Machine</class>
+        <class>fabrica.factoryfloor.machinemanagement.domain.ConfigurationFile</class>
+        <class>fabrica.factoryfloor.productionlinemanagement.domain.ProductionLine</class>
+        <class>fabrica.productordersmanagement.domain.ProductionOrder</class>
+        <class>fabrica.scm.messagesmanagement.domain.Message</class>
+        <class>fabrica.scm.messagesmanagement.domain.ActivityEndMessage</class>
+        <class>fabrica.scm.messagesmanagement.domain.ActivityResumptionMessage</class>
+        <class>fabrica.scm.messagesmanagement.domain.ActivityStartMessage</class>
+        <class>fabrica.scm.messagesmanagement.domain.ChargebackMessage</class>
+        <class>fabrica.scm.messagesmanagement.domain.ConsumptionMessage</class>
+        <class>fabrica.scm.messagesmanagement.domain.ForcedStopMessage</class>
+        <class>fabrica.scm.messagesmanagement.domain.ProductionDeliveryMessage</class>
+        <class>fabrica.scm.messagesmanagement.domain.ProductionMessage</class>
+        <class>fabrica.scm.messagesmanagement.domain.Failure</class>
+        <class>fabrica.productordersmanagement.domain.ProductionOrderReport</class>
+        <class>fabrica.scm.messagesmanagement.domain.Consumption</class>
+        <class>fabrica.scm.messagesmanagement.domain.Chargeback</class>
+        <class>fabrica.scm.messagesmanagement.domain.Production</class>
+        <class>fabrica.scm.messagesmanagement.domain.ProductionDelivery</class>
+        <class>fabrica.scm.messagesmanagement.domain.MachineTime</class>
+        <class>fabrica.errornotificationmanagement.domain.ErrorNotification</class>
+        <class>fabrica.scm.sendconfigfilemanagement.aplication.domain.RequestConfigFile</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/db/fabrica"/>
+
+            <!-- <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/db/fabrica"/> -->
+
+            <!--<property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/base"/> -->
+            <!-- <property name="javax.persistence.jdbc.url" value="jdbc:h2:..\db\base;MV_STORE=FALSE"/> -->
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value="eapli"/>
+
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <!-- <property name="eclipselink.logging.level" value="FINE"/> -->
+            <!-- <property name = "hibernate.show_sql" value = "true" /> -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+
+        </properties>
+    </persistence-unit>
+</persistence>

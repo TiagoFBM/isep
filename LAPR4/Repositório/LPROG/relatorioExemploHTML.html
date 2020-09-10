@@ -1,0 +1,69 @@
+<!DOCTYPE HTML><html xmlns:ns="http://www.dei.isep.ipp.pt/lprog">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Tema : LAPR4 Smart Shop Floor Management</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <div align="left">
+      <body link="#00009C">
+         <div id="geral"><font face="arial">
+               <div class="page"><img src="https://www2.dei.isep.ipp.pt/images/logo.png" width="770"><br><br><h1 id="header1"><font size="9"><b>Tema : LAPR4 Smart Shop Floor Management</b></font></h1><br><br><font size="6" color="#00963c"><b>Gestão de Atividade Pedagógica</b></font><br><br><font size="4" color="#000000">Instituto Superior de Engenharia do Porto - Licenciatura em Engenharia Informática</font><br><font size="4" color="#000000">Linguagens e Programação: 
+                     LPROG2º Ano
+                     </font><p></p><font size="4" color="#000000">Ano Lectivo 2019/2020</font><p></p><font size="4" color="#000000"><font color="#636363">Turma: </font>2DE</font><br><font size="4" color="#000000"><font color="#636363">Professor(a): </font>AMD - Aula: T<br><font color="#636363">Professor(a): </font>PSM - Aula: TP<br><font color="#636363">Professor(a): </font>JRT - Aula: PL<br></font><p></p><font size="4" color="#000000"><font color="#636363">Autores:</font><br>Francisco Bobiano - 1160593 - Email: 1161205@isep.ipp.pt<br>Pedro Cruz - 1160988 - Email: 1160988@isep.ipp.pt<br>Mário Matias - 1161205 - Email: 1161205@isep.ipp.pt<br></font><p></p>
+               </div>
+               <div class="page">
+                  <h1 id="header2">
+                     <p></p><font size="7"><b>Índice</b></font><p></p><font size="4"><a href="#header1">Capa</a><br><a href="#header2">Indice</a><br><a href="#header3">Introdução</a><br><a href="#header4">Análise</a><br><a href="#header5">Linguagem</a><br><a href="#header6">Transformações</a><br><a href="#header7">Conclusão</a><br><a href="#header8">Anexos</a><br><a href="#header9">Referências Bibliográficas</a><br></font><p></p>
+                  </h1>
+               </div>
+               <div class="page">
+                  <h1 id="header3"><font size="7"><b>Introdução</b></font></h1><font size="4" color="#000000"><font color="#00963c">(Introdução)</font><p align="justify">Este trabalho foi desenvolvido no âmbito das aulas PL da unidade curricular <b>LPROG</b> e tem como objetivo a aplicação dos conhecimentos lecionados sobre XML, XML Schema
+                        e a utilização de XSLT e XPath para fazer transformações a documentos XML.<br><br>Os objetivos concretos do trabalho consistem em reproduzir um documento XML baseado
+                        num tema fornecido a cada turma, validar esse documento através de um XML Schema e
+                        fazer 3 transformações para HTML, 2 para TXT e outras 2 para outra formatação de XML.
+                        Para além disso o próprio relatório também será entregue num documento XML e numa
+                        transformação para HTML.<br><br>O tema abordado foi <u>Gestão de Atividade Pedagógica</u> (tema 2) que pretende disponibilizar várias informações sobre documentos de apoio
+                        ao funcionamento de unidades curriculares.<br><br></p></font></div>
+               <div class="page">
+                  <h1 id="header4"><font size="7"><b>Análise</b></font></h1><font size="4" color="#000000"><font color="#00963c">(Análise)</font><p align="justify">Para resolver os objetivos propostos na criação do documento XML em função do tema
+                        indicado foi necessária a identificação das entidades presentes.<br><br>De tal modo é possível identificar as seguintes entidades:<br><br>A organização de tais entidades seguiu regras de boa marcação e foi conseguida com
+                        uma análise detalhada do problema por parte de todos os elementos do grupo.<br><br>
+                        - Lista de Documentos: entidade principal que contem todos os documentos<br>
+                        - Documento: entidade que contém toda a informação de cada documento necessária para
+                        cumprir os requisitos do tema escolhido<br>
+                        - Errata: entidade onde estão todos os erros e comentários presentes no documento<br>
+                        - Lista de erros<br>
+                        - Lista de comentários<br><br></p></font></div>
+               <div class="page">
+                  <h1 id="header5"><font size="7"><b>Linguagem</b></font></h1><font size="4" color="#000000"><font color="#00963c">(Linguagem)</font><p align="justify">Em prol de organização o XML Schema foi estruturado de modo “modular”, ou seja, cada
+                        atributo e cada elemento, complexo ou simples, foram definidos de forma separada e
+                        quando esses elementos necessitavam de ser usados eram apenas referenciados. Deste
+                        modo é conseguido um ficheiro XSD com maior organização e com maior facilidade de
+                        compreensão, edição e correção, se o caso se verificar.<br><br>Deste modo temos primeiro a definição de tipos:<br><br>De seguida são definidos os atributos:<br><br>Seguidos dos elementos simples:<br><br>Por último são definidos os elementos complexos, entre eles o elemento base:<br><br>Em função do XML Schema definido o documento XML produzido é constituído por um elemento
+                        base, <u>Documentos</u>, que terá vários elementos <u>Documento</u>. Este por sua vez terá mais elementos na sua constituição, incluindo o elemento <u>Errata</u> que é constituído por uma lista de erros, elemento <u>Erros</u>, e por uma lista de comentários, elemento <u>Comentários</u>.<br><br>Exemplo de um Documento:<br><br></p></font></div>
+               <div class="page">
+                  <h1 id="header6"><font size="7"><b>Transformações</b></font></h1><font size="4" color="#000000"><font color="#00963c">(Tranformações)</font><p align="justify">Foram feitas 3 transformações XML para HTML.<br><br>A primeira é uma lista simples de alguma informação relativamente a todos os documentos.<br><br>A segunda é a mesma lista de informação mas usando a tag <i>details</i> do html para mostrar apenas uma informação ainda mais sucinta e apenas quando se
+                        expande mostra o resto da informação.<br><br>De XML para TXT foram feitas 2 transformações.<br><br>O primeiro ficheiro contém maior parte da informação, omitindo apenas o tipo de documento.<br><br><div>
+                           <div>Print da 1ª transformação para HTML</div><img src="./../xml2html/html1.jpg" height="600"></div><br><br><div>
+                           <div>Print da 2ª transformação para HTML</div><img src="./../xml2html/html2.jpg" height="600"></div><br><br><div>
+                           <div>Print da 1ª transformação para TXT</div><img src="./../xml2txt/txt1.jpg" height="600"></div><br><br></p></font></div>
+               <div class="page">
+                  <h1 id="header7"><font size="7"><b>Conclusão</b></font></h1><font size="4" color="#000000"><font color="#00963c">(Conclusão)</font><p align="justify">Todos os objetivos do trabalho foram concluídos com êxito, desde a definição do XML
+                        Schema, até à estruturação do documento XML e às suas transformações em HTML, TXT
+                        e XML. Os requisitos técnicos foram também concluídos com sucesso. Na criação do documento
+                        XML e do XML Schema foram usados até à exaustão várias restrições, combinações de
+                        dados, etc.<br><br>A execução do relatório foi também concluída com sucesso, assim como a sua transformação
+                        para HTML.<br><br>Concluindo, é, portanto, seguro concluir que a execução do trabalho foi um êxito.<br><br></p></font></div>
+               <div class="page">
+                  <h1 id="header8"><font size="7"><b>Anexos</b></font></h1><font size="4" color="#000000"><font color="#00963c">(Anexos)</font><p align="justify">
+                        <div>
+                           <div>Excerto do documento XML</div><img src="./../xml/xml.jpg" height="600"></div><br><br><div>
+                           <div>Excerto do documento XSD</div><img src="./../xsd/xsd.jpg" height="600"></div><br><br><div>
+                           <div>Print da 1ª transformação para HTML</div><img src="./../xml2html/html1.jpg" height="600"></div><br><br><div>
+                           <div>Print da 2ª transformação para HTML</div><img src="./../xml2html/html2.jpg" height="600"></div><br><br><div>
+                           <div>Print da 1ª transformação para TXT</div><img src="./../xml2txt/txt1.jpg" height="600"></div><br><br></p></font></div>
+               <div class="page">
+                  <h1 id="header9"><font size="7"><b>Referências Bibliográficas</b></font></h1><font size="4" color="#000000"><a href="https://www.w3schools.com/xml/" target="_top">https://www.w3schools.com/xml/</a><br>Exemplos<br>2018-05-23<br><br><a href="https://moodle.isep.ipp.pt/course/view.php?id=5781" target="_top">https://moodle.isep.ipp.pt/course/view.php?id=5781</a><br>Matéria lecionada<br>2018-05-23<br><br><a href="https://stackoverflow.com/" target="_top">https://stackoverflow.com/</a><br>Esclarecimento de dúvidas<br>2018-05-23<br><br></font></div></font></div>
+      </body>
+   </div>
+</html>

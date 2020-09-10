@@ -1,0 +1,28 @@
+#!/bin/bash
+STOREPASS="forgotten"
+OPENSSL_CONF_TEMPLATE="ssl.cnf.template"
+
+##Criação do Servidor para Java.
+for name in client1_J client2_J server_J; do
+	rm -f ${name}.jks ${name}.pem
+	echo -e "${name}\nDEI\nISEP\nPORTO\nPORTO\nPT\nyes" | keytool -genkey -v -alias ${name} -keyalg RSA -keysize 2048 \
+		-validity 365 -keystore ${name}.jks -storepass ${STOREPASS}
+	keytool -exportcert -alias ${name} -keystore ${name}.jks -storepass ${STOREPASS} -rfc -file ${name}.pem
+done
+
+##Criação dos Clientes e Servidor para C.
+for name in client1 client2 serverC; do
+	echo "  ------------ Creating the file with certificate for ${name}    : ${name}.pem"
+	echo "  ------------ Creating the file with the private key for ${name}: ${name}.key"
+	sed -e s#@NAME@#"$name"# ${OPENSSL_CONF_TEMPLATE} > ssl-tmp.cnf
+	openssl req -config ssl-tmp.cnf -new -x509 -days 3650 -nodes -sha256 \
+        	-out ${name}.pem -keyout ${name}.key
+	rm ssl-tmp.cnf
+done
+
+for ENT in client1 client2 client1_J client2_J, serverC; do
+	echo "yes"|keytool -import -alias ${ENT} -keystore server_J.jks -file ${ENT}.pem -storepass ${STOREPASS}
+done
+
+keytool -list -keystore server_J.jks -storepass ${STOREPASS}
+

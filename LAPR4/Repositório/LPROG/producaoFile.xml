@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fabrica xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="diagramaXSD.xsd">
+    <producao>
+        <RawMaterials>
+            <RawMaterial code="100">
+                <description>Madeira seca que poderá ser utilizada para a produção de cadeiras</description>
+                <RawMaterialCategory categoryID="M01">
+                    <briefDescription>Madeira</briefDescription>
+                </RawMaterialCategory>
+                <DataSheet>
+                    <Referency>C:\Users\Daniel Lourenço\Documents\lapr4\repositorio\fabrica\Files\100.pdf</Referency>
+                </DataSheet>
+            </RawMaterial>
+            <RawMaterial code="101">
+                <description>Ferro que permite distribuir e reter o calor uniformemente</description>
+                <RawMaterialCategory categoryID="FE01">
+                    <briefDescription>Ferro</briefDescription>
+                </RawMaterialCategory>
+                <DataSheet>
+                    <Referency>C:\Users\Daniel Lourenço\Documents\lapr4\repositorio\fabrica\Files\101.pdf</Referency>
+                </DataSheet>
+            </RawMaterial>
+            <RawMaterial code="102">
+                <description>Ferragens com ângulo regulável para maior flexibilidade</description>
+                <RawMaterialCategory categoryID="ACO1">
+                    <briefDescription>Aço</briefDescription>
+                </RawMaterialCategory>
+                <DataSheet>
+                    <Referency>C:\Users\Daniel Lourenço\Documents\lapr4\repositorio\fabrica\Files\102.pdf</Referency>
+                </DataSheet>
+            </RawMaterial>
+            <RawMaterial code="103">
+                <description>O verso impermeável protege o colchão.</description>
+                <RawMaterialCategory categoryID="PL01">
+                    <briefDescription>Plástico</briefDescription>
+                </RawMaterialCategory>
+                <DataSheet>
+                    <Referency>C:\Users\Daniel Lourenço\Documents\lapr4\repositorio\fabrica\Files\103.pdf</Referency>
+                </DataSheet>
+            </RawMaterial>
+        </RawMaterials>
+        <RawMaterialCategorys>
+            <RawMaterialCategory categoryID="M01">
+                <briefDescription>Madeira</briefDescription>
+            </RawMaterialCategory>
+            <RawMaterialCategory categoryID="FE01">
+                <briefDescription>Ferro</briefDescription>
+            </RawMaterialCategory>
+            <RawMaterialCategory categoryID="ACO1">
+                <briefDescription>Aço</briefDescription>
+            </RawMaterialCategory>
+            <RawMaterialCategory categoryID="PL01">
+                <briefDescription>Plástico</briefDescription>
+            </RawMaterialCategory>
+            <RawMaterialCategory categoryID="1000">
+                <briefDescription>Lã</briefDescription>
+            </RawMaterialCategory>
+        </RawMaterialCategorys>
+        <Products>
+            <Product fabricationCode="001">
+                <comercialCode>Cimento01</comercialCode>
+                <briefDescription>Cimento</briefDescription>
+                <fullDescription>Cimento indicado para cerâmica de médio formato.</fullDescription>
+                <productCategory>Cimento Cola Flex Médio</productCategory>
+                <unit>KILOGRAMS</unit>
+                <ProductSheet>
+                    <Quantity>
+                        <valor>1000</valor>
+                        <unity>UN</unity>
+                    </Quantity>
+                    <ProductionSheetLine>
+                        <RawMaterial code="100">
+                            <description>Madeira seca que poderá ser utilizada para a produção de cadeiras</description>
+                            <RawMaterialCategory categoryID="M01">
+                                <briefDescription>Madeira</briefDescription>
+                            </RawMaterialCategory>
+                            <DataSheet>
+                                <Referency>C:\Users\Daniel Lourenço\Documents\lapr4\repositorio\fabrica\Files\100.pdf
+                                </Referency>
+                            </DataSheet>
+                        </RawMaterial>
+                        <Quantity>
+                            <valor>1000</valor>
+                            <unity>UN</unity>
+                        </Quantity>
+                    </ProductionSheetLine>
+                </ProductSheet>
+            </Product>
+            <Product fabricationCode="002">
+                <comercialCode>Areia02</comercialCode>
+                <briefDescription>Areia.</briefDescription>
+                <fullDescription>Areia de rio amarela.</fullDescription>
+                <productCategory>Areia Rio</productCategory>
+                <unit>KILOGRAMS</unit>
+            </Product>
+            <Product fabricationCode="003">
+                <comercialCode>Pasta03</comercialCode>
+                <briefDescription>Pasta niveladora</briefDescription>
+                <fullDescription>Pasta niveladora para reparar e preparar solos</fullDescription>
+                <productCategory>AXTON PLUS 15MM</productCategory>
+                <unit>TONNE</unit>
+            </Product>
+            <Product fabricationCode="004">
+                <comercialCode>Placa04</comercialCode>
+                <briefDescription>Placa de gesso</briefDescription>
+                <fullDescription>Placa de gesso cartonado FIRE anti-fogo de tipo F</fullDescription>
+                <productCategory>FIBROPLAC FIRE BA13</productCategory>
+                <unit>TONNE</unit>
+            </Product>
+            <Product fabricationCode="005">
+                <comercialCode>AreiaSuja01</comercialCode>
+                <briefDescription>Areia suja</briefDescription>
+                <fullDescription>Areia indecente para uso</fullDescription>
+                <productCategory>Areia</productCategory>
+                <unit>TONNE</unit>
+            </Product>
+        </Products>
+        <ProductionOrders>
+            <ProductionOrder POCode="100003365">
+                <emissionDate>2020/05/16</emissionDate>
+                <previsionDate>2020/05/16</previsionDate>
+                <Product fabricationCode="001">
+                    <comercialCode>Cimento01</comercialCode>
+                    <briefDescription>Cimento</briefDescription>
+                    <fullDescription>Cimento indicado para cerâmica de médio formato.</fullDescription>
+                    <productCategory>Cimento Cola Flex Médio</productCategory>
+                    <unit>KILOGRAMS</unit>
+                    <ProductSheet>
+                        <Quantity>
+                            <valor>1000</valor>
+                            <unity>UN</unity>
+                        </Quantity>
+                        <ProductionSheetLine>
+                            <RawMaterial code="100">
+                                <description>Madeira seca que poderá ser utilizada para a produção de cadeiras</description>
+                                <RawMaterialCategory categoryID="M01">
+                                    <briefDescription>Madeira</briefDescription>
+                                </RawMaterialCategory>
+                                <DataSheet>
+                                    <Referency>C:\Users\Daniel
+                                        Lourenço\Documents\lapr4\repositorio\fabrica\Files\100.pdf
+                                    </Referency>
+                                </DataSheet>
+                            </RawMaterial>
+                            <Quantity>
+                                <valor>1000</valor>
+                                <unity>UN</unity>
+                            </Quantity>
+                        </ProductionSheetLine>
+                    </ProductSheet>
+                </Product>
+                <Quantity>
+                    <valor>52</valor>
+                    <unity>UN</unity>
+                </Quantity>
+                <unit>UN</unit>
+                <Requests>
+                    <request>
+                        <code>EC2020/00034</code>
+                    </request>
+                    <request>
+                        <code>EC2020/00035</code>
+                    </request>
+                    <request>
+                        <code>EC2020/00036</code>
+                    </request>
+                </Requests>
+                <state>Suspended</state>
+            </ProductionOrder>
+        </ProductionOrders>
+    </producao>
+</fabrica>

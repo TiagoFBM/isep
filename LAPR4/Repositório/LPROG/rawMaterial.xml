@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fabrica xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="diagramaXSD.xsd">
+    <producao>
+        <RawMaterials>
+            <RawMaterial code="100">
+                <description>Madeira seca que poderá ser utilizada para a produção de cadeiras</description>
+                <RawMaterialCategory categoryID="M01">
+                    <briefDescription>Madeira</briefDescription>
+                </RawMaterialCategory>
+                <DataSheet>
+                    <Referency>C:\Users\Daniel Lourenço\Documents\lapr4\repositorio\fabrica\Files\100.pdf</Referency>
+                </DataSheet>
+            </RawMaterial>
+            <RawMaterial code="101">
+                <description>Ferro que permite distribuir e reter o calor uniformemente</description>
+                <RawMaterialCategory categoryID="FE01">
+                    <briefDescription>Ferro</briefDescription>
+                </RawMaterialCategory>
+                <DataSheet>
+                    <Referency>C:\Users\Daniel Lourenço\Documents\lapr4\repositorio\fabrica\Files\101.pdf</Referency>
+                </DataSheet>
+            </RawMaterial>
+            <RawMaterial code="102">
+                <description>Ferragens com ângulo regulável para maior flexibilidade</description>
+                <RawMaterialCategory categoryID="ACO1">
+                    <briefDescription>Aço</briefDescription>
+                </RawMaterialCategory>
+                <DataSheet>
+                    <Referency>C:\Users\Daniel Lourenço\Documents\lapr4\repositorio\fabrica\Files\102.pdf</Referency>
+                </DataSheet>
+            </RawMaterial>
+            <RawMaterial code="103">
+                <description>O verso impermeável protege o colchão.</description>
+                <RawMaterialCategory categoryID="PL01">
+                    <briefDescription>Plástico</briefDescription>
+                </RawMaterialCategory>
+                <DataSheet>
+                    <Referency>C:\Users\Daniel Lourenço\Documents\lapr4\repositorio\fabrica\Files\103.pdf</Referency>
+                </DataSheet>
+            </RawMaterial>
+        </RawMaterials>
+        <RawMaterialCategorys>
+            <RawMaterialCategory categoryID="M01">
+                <briefDescription>Madeira</briefDescription>
+            </RawMaterialCategory>
+            <RawMaterialCategory categoryID="FE01">
+                <briefDescription>Ferro</briefDescription>
+            </RawMaterialCategory>
+            <RawMaterialCategory categoryID="ACO1">
+                <briefDescription>Aço</briefDescription>
+            </RawMaterialCategory>
+            <RawMaterialCategory categoryID="PL01">
+                <briefDescription>Plástico</briefDescription>
+            </RawMaterialCategory>
+            <RawMaterialCategory categoryID="1000">
+                <briefDescription>Lã</briefDescription>
+            </RawMaterialCategory>
+        </RawMaterialCategorys>
+    </producao>
+</fabrica>
