@@ -1,0 +1,52 @@
+.label{
+    display: inline-block;
+    width: 170px;
+    height: 30px;
+    margin-left:50px;
+}
+
+
+.button {
+    width: 170px;
+    height: 30px;
+    margin-left:220px;
+    background-color: #373F51;
+    color: #FFFFFF;
+}
+
+.btnConsult {
+    background-color: #373F51;
+    color: #FFFFFF;
+    width: 100px;
+    height: 25px;
+    margin-left:10px;
+    padding-right: 150px;
+}
+
+table {
+
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 6px;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 95%;
+    text-align: center;
+}
+
+th {
+    background-color: #373F51;
+    color: #FFFFFF;
+}
+
+th,td {
+    border: 1px solid;
+    padding: 1.5%;
+} 
+
+#divTable {
+    overflow: auto;
+    overflow-x: visible;
+}
+
+

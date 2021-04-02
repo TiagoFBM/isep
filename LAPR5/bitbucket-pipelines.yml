@@ -1,0 +1,70 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+
+pipelines:
+  branches:
+    master:
+      - step:
+          image: node:10.15.3
+          caches:
+            - node
+          script: # Modify the commands below to build your repository.
+            - cd masterRede
+            - npm i -g mocha typescript ts-node
+            - npm install
+            - npm test
+      - step:
+           name: Create mdr artifact
+           script: 
+             - git archive --format=tar.gz master:masterRede -o                   masterRede.tar.gz
+           artifacts: 
+           - masterRede.tar.gz
+      - step:
+          name: Deploy mdr to heroku
+          deployment: production
+          caches:
+            - node
+          script:
+            - pipe: atlassian/heroku-deploy:1.1.4
+              variables:
+                HEROKU_API_KEY: $HEROKU_API_KEY
+                HEROKU_APP_NAME: $HEROKU_MDR_NAME
+                ZIP_FILE: "masterRede.tar.gz"
+                WAIT: 'true'
+      - step:
+           name: Create auth artifact
+           script: 
+             - git archive --format=tar.gz master:masterAuthentication -o                   masterAuthentication.tar.gz
+           artifacts: 
+           - masterAuthentication.tar.gz
+      - step:
+          name: Deploy auth to heroku
+          caches:
+            - node
+          script:
+            - pipe: atlassian/heroku-deploy:1.1.4
+              variables:
+                HEROKU_API_KEY: $HEROKU_API_KEY
+                HEROKU_APP_NAME: $HEROKU_AUTH_NAME
+                ZIP_FILE: "masterAuthentication.tar.gz"
+                WAIT: 'true'
+    develop:
+      - step:
+          image: node:10.15.3
+          caches:
+            - node
+          script: # Modify the commands below to build your repository.
+            - cd masterRede
+            - npm i -g mocha typescript ts-node
+            - npm install
+            - npm test
+      - step:
+          image: mcr.microsoft.com/dotnet/sdk:5.0
+          caches:
+            - dotnetcore
+          script:
+            - cd mdv
+            - dotnet test

@@ -1,0 +1,30 @@
+.nav {
+    width: 12.5%;
+    height: 100%;
+    float: left;
+    background-color: #373F51;
+    position: fixed;
+}
+
+.linkDiv {
+    margin-top: 25%;
+}
+
+.link:hover {
+    background-color: #575E6E;
+}
+
+.linkUL {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: x-large;
+    padding: 10px 0 10px 25px;
+}
+
+.navLink {
+    color: white;
+    font-weight: 450;
+}

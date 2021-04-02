@@ -1,0 +1,7 @@
+.importDiv{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 10vh;
+    line-height: 10vh;
+}

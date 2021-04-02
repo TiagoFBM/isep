@@ -1,0 +1,186 @@
+.content {
+    background-color: #D8DBE2;
+    height: 100%;
+    margin-left: 12.5%;
+    width: 87.5%;
+    min-height: 92.5vh;
+}
+
+
+
+table {
+   
+    border-radius: 6px;
+    margin: 0 auto;
+    width: 95%;
+    text-align: center;
+}
+
+th,td {
+    border: 1px solid;
+}
+
+td > button {
+    padding: 5px;
+    margin-left: 10px;
+    font-size: large;
+}
+
+button, input[type=submit] {
+    border-radius: 6px;
+    border: 0px;
+    cursor:pointer;
+}
+
+button:hover, input[type=submit]:hover {
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+button:focus, input[type=submit]:focus {
+    outline: 0;
+}
+
+.action {
+    width: 12.5%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.createElem {
+    position: relative;
+    width: 100%;
+    min-height: 10vh;
+    line-height: 10vh;
+}
+
+.addBtn {
+    vertical-align: middle;
+    float:right; 
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-right: 2.5%;
+    padding: 1%;
+    cursor:pointer;
+}
+
+#submit {
+    float: right;
+    margin-top:5%;
+}
+
+.form {
+    width: 20vw;
+    
+}
+
+.textField {
+    width: 100%;
+}
+
+.shortTextField {
+    width: 20%;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type=submit] {
+    padding: 10px;
+}
+
+.pagination {
+    font-size: 25px;
+    margin-right: 2.5%;
+    text-align: right;
+}
+
+.clickableSpan {
+    cursor: pointer;
+}
+
+.closeCross {
+    float: right;
+}
+
+
+.content-table {
+    border-collapse: collapse;
+    
+}
+
+.content-table thead tr {
+    background-color: #373f51;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.content-table th, 
+.content-table td {
+    padding: 10px 10px;
+}
+
+/* .content-table tbody tr {
+    border-bottom: 1px solid #373f51;
+} */
+
+.content-table tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #e5e5e5;
+}
+
+.addField {
+    float:right;
+}
+
+.content-table-best-path{
+    width: 20%;
+    border-collapse: collapse;
+    
+}
+
+.content-table-best-path thead tr {
+    background-color: #373f51;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.content-table-best-path th, 
+.content-table-best-path td {
+    padding: 2.5px 2.5px;
+}
+
+.content-table-best-path tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+.content-table-best-path tbody tr:nth-of-type(even) {
+    background-color: #e5e5e5;
+}
+
+.divBestPath {
+    float: center;
+    margin-left: 30px;
+}
+
+.labelBestPath {
+    padding: 2.5px 2.5px;
+    background-color:  #373f51;
+    color: white;
+    font-size: 20px;
+}
+
+.inputBestPath {
+    padding: 5px 3px;
+    background-color:#D8DBE2;
+    border: none;
+    font-size: 20px;
+}

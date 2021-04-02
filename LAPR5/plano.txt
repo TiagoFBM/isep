@@ -1,0 +1,37 @@
+Importar dados
+
+Adicionar Nó
+    Node:21
+    41.1970182055062
+    -8.316901846654922
+    Guilhufe
+    GLF
+
+Adicionar Path
+    Path:21
+    empty
+    GLF -> PARED | 60 | 500
+    PARED -> GAND | 200 | 1000
+
+Adicionar Linha
+    Path:21 -> Go
+    Restricao veiculo:
+        bus1111... -> denied
+    Restrição tripulante:
+        driverType2 -> allowed
+
+Adicionar Vehicle Type:
+    comboiointercidadess
+    comboio inter cidades
+    20
+    Diesel
+    17
+    98
+    500
+
+Adicionar Driver Types:
+    driverType3
+    Condutor com carta de pesados
+
+Bestpath
+    VCCAR -> CETE | 70000

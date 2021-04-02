@@ -1,0 +1,33 @@
+.header {
+    background-color: #D8DBE2;
+    width: 87.5%;
+    height: 7.5vh;
+    min-height: 7.5vh;
+    text-align: center;
+    margin-left: 12.5%;
+}
+
+.header > div > h1 {
+    margin: 0;
+    padding: 1vh;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left:5%;
+}
+
+.loginHeader {
+    float: right;
+    margin-top: 2%;
+    margin-right: 2.5%;
+}
+
+.profileBtn1 {
+    font-size: x-large;
+    background-color: red;
+    color:white;
+    float: right;
+}
+
+.profileBtn2 {
+    font-size: x-large;
+}

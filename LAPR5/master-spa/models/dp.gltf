@@ -1,0 +1,382 @@
+{
+    "asset": {
+        "generator": "Khronos glTF Blender I/O v1.4.40",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "scenes": [
+        {
+            "name": "Scene",
+            "nodes": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                10,
+                11
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "_Hemi_1",
+            "translation": [
+                0,
+                47.0120735168457,
+                0
+            ]
+        },
+        {
+            "name": "_Hemi_2",
+            "rotation": [
+                0,
+                0,
+                -1,
+                -1.6292068494294654e-07
+            ],
+            "translation": [
+                0,
+                -19.727153778076172,
+                0
+            ]
+        },
+        {
+            "name": "_Hemi_1.001",
+            "translation": [
+                0,
+                47.0120735168457,
+                0
+            ]
+        },
+        {
+            "name": "_Hemi_2.001",
+            "rotation": [
+                0,
+                0,
+                -1,
+                -1.6292068494294654e-07
+            ],
+            "translation": [
+                0,
+                -19.727153778076172,
+                0
+            ]
+        },
+        {
+            "name": "_Hemi_1.002",
+            "translation": [
+                0,
+                47.0120735168457,
+                0
+            ]
+        },
+        {
+            "name": "_Hemi_2.002",
+            "rotation": [
+                0,
+                0,
+                -1,
+                -1.6292068494294654e-07
+            ],
+            "translation": [
+                0,
+                -19.727153778076172,
+                0
+            ]
+        },
+        {
+            "mesh": 0,
+            "name": "Mesh_0",
+            "translation": [
+                -2.2867419719696045,
+                -0.5869736075401306,
+                52.345848083496094
+            ]
+        },
+        {
+            "mesh": 1,
+            "name": "Mesh_1",
+            "translation": [
+                1.7783279418945312,
+                4.0070648193359375,
+                20.06729507446289
+            ]
+        },
+        {
+            "children": [
+                6,
+                7
+            ],
+            "name": "bus_stop.obj.cleaner"
+        },
+        {
+            "children": [
+                8
+            ],
+            "name": "RootNode (model correction matrix)"
+        },
+        {
+            "children": [
+                9
+            ],
+            "name": "RootNode (gltf orientation matrix)",
+            "rotation": [
+                -0.7071068286895752,
+                0,
+                0,
+                0.7071068286895752
+            ]
+        },
+        {
+            "name": "Camera",
+            "rotation": [
+                0.483536034822464,
+                0.33687159419059753,
+                -0.20870360732078552,
+                0.7804827094078064
+            ],
+            "translation": [
+                7.358891487121582,
+                4.958309173583984,
+                6.925790786743164
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "alphaMode": "BLEND",
+            "doubleSided": true,
+            "emissiveTexture": {
+                "index": 0,
+                "texCoord": 0
+            },
+            "name": "mat_bus_stop_glass-recolha",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    1,
+                    1,
+                    1,
+                    0.4000000059604645
+                ],
+                "baseColorTexture": {
+                    "index": 1,
+                    "texCoord": 0
+                },
+                "metallicFactor": 0,
+                "roughnessFactor": 0.6000000238418579
+            }
+        },
+        {
+            "doubleSided": true,
+            "emissiveTexture": {
+                "index": 2,
+                "texCoord": 0
+            },
+            "name": "mat_bus_stop-recolha",
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 3,
+                    "texCoord": 0
+                },
+                "metallicFactor": 0,
+                "roughnessFactor": 0.6000000238418579
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Mesh_0",
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2
+                    },
+                    "indices": 3,
+                    "material": 0
+                }
+            ]
+        },
+        {
+            "name": "Mesh_1",
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 4,
+                        "NORMAL": 5,
+                        "TEXCOORD_0": 6
+                    },
+                    "indices": 7,
+                    "material": 1
+                }
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        },
+        {
+            "sampler": 0,
+            "source": 1
+        },
+        {
+            "sampler": 0,
+            "source": 2
+        },
+        {
+            "sampler": 0,
+            "source": 3
+        }
+    ],
+    "images": [
+        {
+            "mimeType": "image/jpeg",
+            "name": "mat_bus_stop_glass_emissive-recolha",
+            "uri": "mat_bus_stop_baseColor-recolha.jpg"
+        },
+        {
+            "mimeType": "image/jpeg",
+            "name": "mat_bus_stop_glass_baseColor-recolha",
+            "uri": "mat_bus_stop_baseColor-recolha.jpg"
+        },
+        {
+            "mimeType": "image/jpeg",
+            "name": "mat_bus_stop_emissive-recolha",
+            "uri": "mat_bus_stop_emissive-recolha.jpg"
+        },
+        {
+            "mimeType": "image/jpeg",
+            "name": "mat_bus_stop_baseColor-recolha",
+            "uri": "mat_bus_stop_baseColor-recolha.jpg"
+        }
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5126,
+            "count": 192,
+            "max": [
+                33.620758056640625,
+                20.336002349853516,
+                7.258602142333984
+            ],
+            "min": [
+                -33.39909362792969,
+                -20.335987091064453,
+                -10.38034439086914
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 192,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5126,
+            "count": 192,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5123,
+            "count": 432,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 4,
+            "componentType": 5126,
+            "count": 1815,
+            "max": [
+                30.960996627807617,
+                16.104232788085938,
+                39.22300720214844
+            ],
+            "min": [
+                -39.41954040527344,
+                -24.56775665283203,
+                -21.913476943969727
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 5,
+            "componentType": 5126,
+            "count": 1815,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 6,
+            "componentType": 5126,
+            "count": 1815,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 7,
+            "componentType": 5123,
+            "count": 4773,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 2304,
+            "byteOffset": 0
+        },
+        {
+            "buffer": 0,
+            "byteLength": 2304,
+            "byteOffset": 2304
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1536,
+            "byteOffset": 4608
+        },
+        {
+            "buffer": 0,
+            "byteLength": 864,
+            "byteOffset": 6144
+        },
+        {
+            "buffer": 0,
+            "byteLength": 21780,
+            "byteOffset": 7008
+        },
+        {
+            "buffer": 0,
+            "byteLength": 21780,
+            "byteOffset": 28788
+        },
+        {
+            "buffer": 0,
+            "byteLength": 14520,
+            "byteOffset": 50568
+        },
+        {
+            "buffer": 0,
+            "byteLength": 9546,
+            "byteOffset": 65088
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9729,
+            "minFilter": 9986
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 74636,
+            "uri": "nothing.bin"
+        }
+    ]
+}

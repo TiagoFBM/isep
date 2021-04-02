@@ -1,0 +1,12 @@
+osascript -e 'tell app "Terminal"
+    do script "cd ~/Documents/ISEP/3ANO/1SEMESTRE/LAPR5/Repositorio/masterAuthentication
+            npm start"
+end tell'
+osascript -e 'tell app "Terminal"
+    do script "cd ~/Documents/ISEP/3ANO/1SEMESTRE/LAPR5/Repositorio/masterRede
+            npm start"
+end tell'
+osascript -e 'tell app "Terminal"
+    do script "cd ~/Documents/ISEP/3ANO/1SEMESTRE/LAPR5/Repositorio/master-spa
+            npm start"
+end tell'   
